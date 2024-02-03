@@ -1,8 +1,8 @@
 <?php
 
-	defined('TYPO3') or die('Access denied.');
-
 	use \Typo3\CMS\Core\Utility\GeneralUtility;
+
+	defined('TYPO3') or die('Access denied.');
 
 	/***************
 	 * Add default RTE configuration
