@@ -1,0 +1,8 @@
+.scaffold-topbar{
+	background: #a10000
+}
+.topbar-header-site::before,
+.topbar-header-site::after,
+.toolbar {
+	background: unset;
+}
