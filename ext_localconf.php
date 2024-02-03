@@ -31,4 +31,4 @@
 	if ($versionInformation->getMajorVersion() < 13) {
 		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('@');
 	};
-	*/
+
