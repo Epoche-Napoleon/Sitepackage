@@ -24,7 +24,9 @@
 	/***************
 	 * Include UserTS
 	 */
+	/*
 	$versionInformation = GeneralUtility::makeInstance(\TYPO3\CMS\Core\Information\Typo3Version::class);
 	if ($versionInformation->getMajorVersion() < 13) {
 		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('@');
 	};
+	*/
