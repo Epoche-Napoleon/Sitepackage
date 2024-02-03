@@ -2,6 +2,8 @@
 
 	defined('TYPO3') or die('Access denied.');
 
+	use \Typo3\CMS\Core\Utility\GeneralUtility;
+
 	/***************
 	 * Add default RTE configuration
 	 */
