@@ -6,6 +6,6 @@
 
 	# Load the backend css file only in development mode
 	if (getenv('TYPO3_ENV') == "Development") {
-		$GLOBALS['TBE_STYLES']['stylesheet'] = 'EXT:sitepackage/Resources/Public/Css/backend.css';
+		$GLOBALS['TBE_STYLES']['skins']['sitepackage']['stylesheetDirectories'] = 'EXT:sitepackage/Resources/Public/Css/backend.css';
 	}
 
