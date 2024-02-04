@@ -12,6 +12,7 @@
 	 * Add default RTE configuration
 	 */
 	$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['sitepackage'] = 'EXT:sitepackage/Configuration/RTE/Sitepackage.yaml';
+
 	/***************
 	 * PageTS (if TYPO3 version is below 12, otherwise it is included in Configuration/TsConfig/page.tsconfig)
 	 */
@@ -26,10 +27,9 @@
 	/***************
 	* Include UserTS
 	*/
-
 	$versionInformation = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Information\Typo3Version::class);
 	if ($versionInformation->getMajorVersion() < 13) {
-		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('@');
+		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitepackage/Configuration/TsConfig/User.tsconfig"');
 	}
 
 

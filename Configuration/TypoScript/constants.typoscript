@@ -1,0 +1,23 @@
+@import 'EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript'
+@import 'EXT:slickcarousel/Configuration/TypoScript/Constants/*.typoscript'
+
+plugiin.tx_bootstrap_package.settings {
+	settings {
+	  # cat=bootstrap package; type=string; label=Logo file: Path to the logo file
+	  overrideParserVariables =
+	  cssSourceMapping =
+	}
+}
+page.fluidtemplate {
+	partialRootPath = EXT:sitepackge/Resources/Private/Partials/
+	layoutRootPath = EXT:sitepackge/Resources/Private/Layouts/
+	templateRootPath = EXT:sitepackge/Resources/Private/Templates/
+}
+
+plugin.bootstrap_package_contentelements {
+	view {
+		layoutRootPath = EXT:sitepackage/Resources/Private/Layouts/ContentElements/
+		partialRootPath = EXT:sitepackage/Resources/Private/Partials/ContentElements/
+		templateRootPath = EXT:sitepackage/Resources/Private/Templates/ContentElements/
+	}
+}

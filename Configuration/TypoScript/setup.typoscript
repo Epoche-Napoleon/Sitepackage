@@ -1,0 +1,61 @@
+@import 'EXT:bootstrap_package/Configuration/TypoScript/setu.typoscript'
+@import 'EXT:sitepackage/Configuration/TypoScript/Setup/*.typoscript'
+
+config {
+	pageTitleSeparator = |
+	pageTitleSeparator.noTrimWrap = | | |
+
+	admPanel = 0
+}
+
+
+page {
+	includeCSS = EXT:bootstrap_package/Resources/Public/Css/bootstrap.min.css
+	website = EXT:sitepackage/Resources/Public/Css/website.css
+
+	includeJSFooter {
+		bootstrap = EXT:bootstrap_package/Resources/Public/JavaScript/bootstrap.min.js
+		bootstrap.external = 0
+		jquery = EXT:bootstrap_package/Resources/Public/JavaScript/jquery.min.js
+		jquery.external = 0
+		popper = EXT:bootstrap_package/Resources/Public/JavaScript/popper.min.js
+		popper.external = 0
+		bootstrap = EXT:sitepackage/Resources/Public/JavaScript/website.js
+		bootstrap.external = 0
+	}
+
+}
+
+page.10 = FLUIDTEMPLATE
+page.10 {
+	templateName = TEXT
+	templateName {
+		cObject = TEXT
+		cObject {
+			data = pagelayout
+			required = 1
+			case = ucfirst
+			split {
+				token = pagets__
+				cObjNum = 1
+				1.current = 1
+				1.wrap = |
+			}
+		}
+		ifEmpty = Default
+		templateRootPaths {
+			10 = EXT:sitepackage/Resources/Private/Templates/
+			20 = {$plugin.tx_sitepackage.view.templateRootPath}
+		}
+		partialRootPaths {
+			10 = EXT:sitepackage/Resources/Private/Partials/
+			20 = {$plugin.tx_sitepackage.view.partialRootPath}
+		}
+		layoutRootPaths {
+			10 = EXT:sitepackage/Resources/Private/Layouts/
+			20 = {$plugin.tx_sitepackage.view.layoutRootPath}
+		}
+	}
+}
+
+
