@@ -1,4 +1,4 @@
-@import 'EXT:bootstrap_package/Configuration/TypoScript/setu.typoscript'
+@import 'EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript'
 @import 'EXT:sitepackage/Configuration/TypoScript/Setup/*.typoscript'
 
 config {
