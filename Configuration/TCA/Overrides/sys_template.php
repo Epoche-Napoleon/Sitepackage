@@ -2,15 +2,20 @@
 
 	declare(strict_types=1);
 
-	$ExtensionKey = 'sitepackage';
-
-	defined('TYPO3_MODE') or die();
+	defined('TYPO3') || die();
 
 	call_user_func(function () {
-		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-			$ExtensionKey,
-			'Configuration/TypoScript',
-			'EPOCHE NAPOLEON Sitepackage'
-		);
-	});
+	/**
+	 * Extension key
+	 */
+	$extensionKey = 'sitepackage';
 
+	/**
+	 * Add default TypoScript (constants and setup)
+	 */
+	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+		$extensionKey,
+		'Configuration/TypoScript',
+		'Site Package'
+	);
+});
