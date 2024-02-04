@@ -16,6 +16,6 @@
 	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
 		$extensionKey,
 		'Configuration/TypoScript',
-		'Site Package'
+		'EPOCHE NAPOLEON Site Package'
 	);
 });
