@@ -1,0 +1,11 @@
+TCAdefaults {
+	pages {
+		tx_csseo_og_title = Hier Seitentitel eingeben
+		tx_csseo_og_description = Hier bitte Seitenbeschreibung eingeben
+		tx_csseo_tw_title = Hier Seitentitel eingeben
+		tx_csseo_tw_description = Hier Seitenbeschreibung eingeben
+		tx_csseo_tw_creator = EPOCHENAPOLEON
+		tx_csseo_tw_site = EPOCHENAPOLEON
+	}
+	hidden = 1
+}

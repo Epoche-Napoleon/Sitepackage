@@ -9,9 +9,9 @@ plugiin.tx_bootstrap_package.settings {
 	}
 }
 page.fluidtemplate {
-	partialRootPath = EXT:sitepackge/Resources/Private/Partials/
-	layoutRootPath = EXT:sitepackge/Resources/Private/Layouts/
-	templateRootPath = EXT:sitepackge/Resources/Private/Templates/
+	partialRootPath = EXT:sitepackge/Resources/Private/Partials/Sitepackage/
+	layoutRootPath = EXT:sitepackge/Resources/Private/Layouts/Sitepackage/
+	templateRootPath = EXT:sitepackge/Resources/Private/Templates/Sitepackage/
 }
 
 plugin.bootstrap_package_contentelements {
