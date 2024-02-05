@@ -1,0 +1,6 @@
+@import 'EXT:epochenapoleon_sitepackage/Configuration/Typoscript/Constants/00010_Uri.typoscript'
+@import 'EXT:epochenapoleon_sitepackage/Configuration/Typoscript/Constants/00020_Variables.typoscript'
+@import 'EXT:epochenapoleon_sitepackage/Configuration/Typoscript/Constants/00040_Constants.typoscript'
+@import 'EXT:epochenapoleon_sitepackage/Configuration/Typoscript/Constants/00050_Extensions.typoscript'
+@import 'EXT:bootstrap_package/Configuration/TypoScript/ContentElement/constants.typoscript'
+@import 'EXT:bootstrap_package/Configuration/TypoScript/Extension/constants.typoscript'

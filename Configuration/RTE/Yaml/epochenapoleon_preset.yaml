@@ -1,0 +1,205 @@
+# Load default processing options
+imports:
+      - { resource: "EXT:rte_ckeditor/Configuration/RTE/Processing.yaml" }
+      - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
+      - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
+      - { resource: "EXT:rte_ckeditor_fontawesome/Configuration/RTE/PluginFA5.yaml" }
+
+# Edit configuration for the Editor
+# For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
+editor:
+  config:
+    contentsCss: [ "EXT:rte_ckeditor/Resources/Public/Css/contents.css","EXT:epochenapoleon_sitepackage/Resources/Public/Css/editor.css"]
+    # Configuration of the editors window
+    width: "900px"
+    resize_enabled: true
+    resize_dir: 'both'
+    resize_maxWidth: 1200
+    resize_minWidth:  400
+    uiColor: "FFF8DC"
+    # Spellchecker alway on Configuration
+    defaultContentLanguage: "de"
+    defaultLanguage: "de"
+    contentLanguage: "de"
+    language: "de"
+    scayt_autoStartup: true # Spellcheck always on
+    scayt_sLang: "de_DE" # Spellcheck Language
+    wsc_lang: "de_DE"
+
+    stylesSet:
+      - { name: "Person zu bearbeiten", element: 'a', attributes: {class: 'person'} }
+      - { name: "Person Frau", element: 'a', attributes: {class: 'person-women'} }
+      - { name: "Person Mann", element: 'a', attributes: {class: 'person-men'} }
+      - { name: "Quelle", element: 'a', attributes: {class: 'quelle-online'} }
+      - { name: "Werktitel", element: 'span', attributes: { class: 'werktitel'} }
+      - { name: "Glossar", element: 'a', attributes: {class: 'glossary-link'} }
+      - { name: "Sprecherrolle", element: 'p', attributes: {class: 'speakerrole'} }
+      - { name: "Sprechertext", element: 'p', attributes: {class: 'speakertext'} }
+      - { name: "Einfacher Einzug", element:  'p', attributes: {class: 'einzug1'} }
+      - { name: "Doppelter Einzug", element:  'p', attributes: {class: 'einzug2'} }
+      - { name: "Regieanweisung", element: 'span', attributes: {class: 'regie'} }
+      - { name: "Rote Schrift", element: 'span', attributes: { class: 'highlighted red'} }
+      - { name: "Wichtig", element: ['p', 'div', 'span', 'ol', 'ul', 'blockquote'], attributes: {class: 'important'} }
+      - { name: "Button", element: 'a', attributes: { class: 'button' } }
+      - { name: "Checkliste", element: 'ul', attributes: { class: 'check-list'} }
+      - { name: "Linksbündig", element: ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'blockquote', 'td', 'th'], attributes: { class: 'align-left' } }
+      - { name: "Mittig", element: ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'blockquote', 'td', 'th'], attributes: { class: 'align-center' } }
+      - { name: "Rechtsbündig", element: ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'blockquote', 'td', 'th'], attributes: { class: 'align-right' } }
+      - { name: "Blocksatz", element: ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'blockquote', 'td', 'th'], attributes: { class: 'align-justify' } }
+      - { name: "Clearboth", element: 'hr', attributes: {class: 'clearboth'} }
+      - { name: "Marginale", element: 'p', attributes: { class: 'randtext'} }
+      - { name: "Quellennachweis", element: 'p', attributes: { class: 'source'} }
+      - { name: "Telefon", element: ['span','a'], attributes: { class: 'telephone' } }
+      - { name: "Sprache: Englisch", element: 'span', attributes: {lang: 'en'} }
+      - { name: "Sprache: Französisch", element: 'span', attributes: {lang: 'fr'} }
+      - { name: "Sprache: Hebräisch", element: 'span', attributes: {lang: 'he'} }
+      - { name: "Sprache: Italienisch", element: 'span', attributes: {lang: 'it'} }
+      - { name: "Sprache: Latein", element: 'span', attributes: {lang: 'la'} }
+
+    format_tags: "p;h2;h3;h4;h5"
+
+    toolbarGroups:
+      - { name: styles, groups: [ styles, format ] }
+      - { name: basicstyles, groups: [ basicstyles, align, cleanup ] }
+      - /
+      - { name: paragraph, groups: [ list, indent, blocks, align, paragrah ] }
+      - { name: links, groups: [ links, anchor ] }
+      - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
+      - { name: editing, groups: [ find, selection, spellchecker, editing, removeformat ] }
+      - { name: insert, groups: [ insert ] }
+      - /
+      - { name: table }
+      - { name: tabletools }
+      - /
+      - { name: tools, groups: [ tools, table, specialchar ] }
+      - { name: forms, groups: [ forms ] }
+      - { name: document, groups: [ mode, document, doctools ] }
+      - { name: about, groups: [about] }
+
+    justifyClasses:
+      - align-left
+      - align-center
+      - align-right
+      - align-justify
+
+    extraPlugins:
+      - about
+      - autogrow
+      - specialchar
+      - showblocks
+      - justify
+      - div
+      - find
+      - liststyle
+      - selectall
+      - wordcount
+
+    removePlugins:
+      - image
+    removeButtons:
+      - Strike
+      - Outdent
+      - Indent
+
+  externalPlugins:
+    cowriter:
+      resource: "EXT:t3_cowriter/Resources/Public/JavaScript/Plugins/cowriter/"
+
+processing:
+  allowTags:
+    - u
+    - s
+    - em
+
+buttons:
+  link:
+    relAttribute:
+      enabled: true
+    properties:
+      class:
+        allowedClasses: 'link-internel, link-internal-blank, person-men, person-women, quelle-online, link-download,link-folder, link-external, link-external-blank, link-mail, telephone'
+      page:
+        properties:
+          class:
+            default: 'link-internal'
+      file:
+        properties.:
+          class:
+            default: 'link-download'
+      folder:
+        properties.:
+          class:
+            default: 'link-folder'
+      url:
+        properties:
+          class:
+            default: 'link-external-blank'
+      mail:
+        properties:
+          class:
+            default: 'link-mail'
+      tel:
+        properties:
+          class:
+            default: 'telephone'
+
+classesAnchor:
+  linkInternal:
+    class: 'link-internal'
+    type: 'page'
+  linkInternalBlank:
+    class: 'link-internal-blank'
+    type: 'page'
+    target: '_blank'
+  linkFolder:
+    class: 'link-folder'
+    type: 'folder'
+  linkExternal:
+    class: 'link-external'
+    type: 'url'
+  linkDownload:
+    class: 'link-external-blank'
+    type: 'url'
+    target: '_blank'
+  linkMail:
+    class: 'link-mail'
+    type: 'mail'
+classes.:
+  link-internal:
+    name: 'Interner Link'
+  link-internal-blank:
+    name: 'Interner Link auf neue Seite'
+  link-download:
+    name: 'Dateidownload'
+  link-folder:
+    name: 'Öffnet Ordner'
+  link-external:
+    name: 'Link auf externe Seite'
+  link-external-blank:
+    name: 'Link auf neue externe Seite'
+  link-mail:
+    name: 'Email-Verknüpfung'
+  Person (Mann):
+    name: 'Person Mann'
+    class: 'person-men'
+    type: 'page'
+  Person (Frau):
+    name: 'Person Frau'
+    class: 'person-women'
+    type: 'page'
+  Quelle:
+    name: 'Quelle intern'
+    class: 'quelle-online'
+    type: 'page'
+  Werktitel:
+    name: 'Titel eines Werkes'
+    class: 'werktitel'
+    type: 'page'
+  Glossar-Eintrag:
+    name: 'Glossar'
+    class: 'glossary-link'
+    type: 'page'
+  Telephone-Eintrag:
+    name: 'Telephone'
+    class: 'telephone'
+    type: 'tel'

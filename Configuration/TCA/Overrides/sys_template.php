@@ -1,21 +1,25 @@
 <?php
+/**
+ * Created by PhpStorm.
+ * User: Michael Gnessner
+ * Date: 26.08.2018
+ * Time: 12:33
+ */
+defined('TYPO3_MODE') || die();
 
-	declare(strict_types=1);
+call_user_func(function ()
+{
+    /**
+     * EXtension key
+     */
+    $extensionKey = 'sitepackage';
 
-	defined('TYPO3') || die();
-
-	call_user_func(function () {
-	/**
-	 * Extension key
-	 */
-	$extensionKey = 'sitepackage';
-
-	/**
-	 * Add default TypoScript (constants and setup)
-	 */
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-		$extensionKey,
-		'Configuration/TypoScript',
-		'EPOCHE NAPOLEON Site Package'
-	);
+    /**
+     * Default Typoscript
+     */
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+        $extensionKey,
+        'Configuration/Typoscript',
+        'EPOCHE NAPOLEON Sitepackage'
+    );
 });

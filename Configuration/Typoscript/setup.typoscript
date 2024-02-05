@@ -1,0 +1,5 @@
+@import 'EXT:epochenapoleon_sitepackage/Configuration/Typoscript/Setup/00010_Config.typoscript'
+@import 'EXT:epochenapoleon_sitepackage/Configuration/Typoscript/Setup/00020_Libs.typoscript'
+@import 'EXT:epochenapoleon_sitepackage/Configuration/Typoscript/Setup/00030_CE.typoscript'
+@import 'EXT:epochenapoleon_sitepackage/Configuration/Typoscript/Setup/00040_Extension.typoscript'
+@import 'EXT:epochenapoleon_sitepackage/Configuration/Typoscript/Setup/00050_Page.typoscript'

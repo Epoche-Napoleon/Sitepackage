@@ -1,0 +1,24 @@
+tx_news {
+	templateLayouts {
+	# Allows to preset further layouts for the Flexform selection in the content element
+	}
+	# Preset Archive Date for all messages: 1 month after creation
+	predefine.archive = +1 month
+	module {
+		defaultPid.tx_news_domain_model_news = 19
+		controlPanels = 1
+		preSelect {
+			recursive = 1
+		}
+		columns = datetime,archive
+		redirectToPageOnStart = 19
+	}
+}
+lib.contentElement{
+	templateRootPaths{
+		1277 = EXT:ce_timeline/Resources/Private/Templates/
+	}
+	partialRootPaths{
+		1277 = EXT:ce_timeline/Resources/Private/Partials/
+	}
+}

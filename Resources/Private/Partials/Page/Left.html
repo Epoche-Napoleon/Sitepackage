@@ -1,0 +1,15 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+  <div id="left" class="leftheight">
+    <f:format.raw>
+        {menu}
+    </f:format.raw>
+  <f:if condition="{permleft}">
+    <div id="permleft">
+      <f:format.raw>
+        {permleft}
+          </f:format.raw>
+    </div>
+  </f:if>
+  </div>
+</html>

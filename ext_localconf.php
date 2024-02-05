@@ -1,35 +1,20 @@
 <?php
+defined('TYPO3_MODE') || die();
 
-	declare(strict_types=1);
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
+    '<INCLUDE_TYPOSCRIPT:source="FILE:EXT:epochenapoleon_sitepackage/Configuration/TSConfig/page.tsconfig">'
+);
+// Individual RTE Configuration
+$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['epochenapoleon_preset'] = 'EXT:epochenapoleon_sitepackage/Configuration/RTE/Yaml/epochenapoleon_preset.yaml';
+$GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['EventLinkViewHelper'] = ['epochenapoleon\\epochjenapoleon_sitepackage\\ViewHelpers'];
+$GLOBALS['TCA']['tx_news_domain_model_news']['ctrl']['thumbnail'] = 'fal_media';
 
-	use \TYPO3\CMS\Core\Information\Typo3Version;
-	use \TYPO3\CMS\Core\Utility\GeneralUtility;
-	use \TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+// Erweiterung Glossary2
+// $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['glossary2']['extender']['CLASSNAME']['epochenapoleon_sitepackage'] =
+    \Vendor\EXTKEY2\Domain\Model\CLASSNAME::class;
 
-	defined('TYPO3') or die('Access denied.');
+// $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['glossary2']['extender']['CLASSNAME']['epochenapoleon_sitepackage'] =
+    'EXT:EXTKEY2/Classes/Domain/Model/CLASSNAME.php';
 
-	/***************
-	 * Add default RTE configuration
-	 */
-	$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['sitepackage'] = 'EXT:sitepackage/Configuration/RTE/Sitepackage.yaml';
-
-	/***************
-	 * PageTS (if TYPO3 version is below 12, otherwise it is included in Configuration/TsConfig/page.tsconfig)
-	 */
-
-	$versionInformation = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Information\Typo3Version::class);
-	// Import PageTS only if TYPO3 version is below 12 so that it is not included twice
-	if ($versionInformation->getMajorVersion() < 12) {
-		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitepackage/Configuration/TsConfig/Page/All.tsconfig">');
-	}
-
-
-	/***************
-	* Include UserTS
-	*/
-	$versionInformation = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Core\Information\Typo3Version::class);
-	if ($versionInformation->getMajorVersion() < 13) {
-		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitepackage/Configuration/TsConfig/User.tsconfig"');
-	}
-
-
+// $GLOBALS['TYPO3_CONF_VARS']['EXTENSIONS']['glossary2']['extender']['CLASSNAME']['epochenapoleon_sitepackage'] =
+    'Domain/Model/SingleModel';

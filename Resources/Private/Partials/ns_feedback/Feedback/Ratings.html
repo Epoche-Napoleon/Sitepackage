@@ -1,0 +1,42 @@
+<f:form action="ratingFeedback" id="rating-form-{cData.uid}" enctype="multipart/form-data" class="ns-rating-form" pageType="775437233">
+	<f:form.hidden value="2" name="feedbackType" />
+	<f:form.hidden name="newsId" value="{newsId}" />
+	<f:form.hidden name="cid" value="{cData.uid}" />
+	<f:switch expression="{settings.ratingsType}">
+		<f:case value="1">
+			<div class="ns-form-group">
+				<label for="star-rating-{cData.uid}">{settings.ratingTitle}</label>
+				<div class="stars stars-example-css">
+					<select id="star-rating-{cData.uid}" name="rating" data-formid="rating-form-{cData.uid}">
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</div>
+			</div>
+		</f:case>
+		<f:case value="2">
+			<div class="ns-form-group">
+				<label for="emoji-rating-{cData.uid}">{settings.ratingTitle}</label>
+				<div id="emoji-rating-{cData.uid}" data-formid="rating-form-{cData.uid}"></div>
+			</div>
+		</f:case>
+		<f:case value="3">
+			<div class="ns-form-group">
+				<label for="number-rating-{cData.uid}">{settings.ratingTitle}</label>
+				<div class="box-body">
+					<select id="number-rating-{cData.uid}" name="rating" autocomplete="off" data-formid="rating-form-{cData.uid}">
+						<option value=""></option>
+						<option value="1">1</option>
+						<option value="2">2</option>
+						<option value="3">3</option>
+						<option value="4">4</option>
+						<option value="5">5</option>
+					</select>
+				</div>
+			</div>
+		</f:case>
+	</f:switch>
+</f:form>

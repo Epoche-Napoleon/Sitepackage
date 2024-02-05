@@ -1,31 +1,32 @@
 <?php
-	$EXTKEY = 'sitepackage';
 
-	$EM_CONF[$_EXTKEY] = array(
-		'title' => 'EPOCHE NAPOLEON Stepackage',
-		'description' => 'TYPO3 Sitepackage for Website EPOCHENAPOLEON-From the French Revolution to Waterloo. The sitepackage is based on Benjamin Kott\'s BootstrapPackage.',
-		'category' => 'templates',
-		'constraints' => array(
-			'depends' => array(
-				'typo3' => ' 11.5.0-11.5.99 || 12.4.0-12.4.99',
-				'php' => '7.4.0 - 8.1.99',
-				'bootstrap_package' => '12.0.0-13.9.99'
-			),
-			'conflicts' => array(),
-		),
-		'autoload' => array(
-			'psr-4' => array(
-				'EpocheNapoleon\\Sitepackage\\' => 'Classes',
-			),
-		),
-		'state' => 'stable',
-		'uploadfolder' => 0,
-		'createDirs' => '',
-		# Depricatatet in TYPO3 12.1
-		'clearCacheOnLoad' => 1,
-
-		'author' => 'Michael Gnessner',
-		'author_email' => 'michael@epoche-napoleon.net',
-		'author_company' => 'EPOCHE NAPOLEON'
-	);
-
+/**
+ * Extension Manager/Repository config file for ext "epoche_napoleon_sitepackage".
+ */
+$EM_CONF[$_EXTKEY] = [
+    'title' => 'EPOCHE NAPOLEON Sitepackage',
+    'description' => 'Sitepackage of the webiste »EPOCHE NAPOLEON« von der Französischen Revolution bis Waterloo (https:,www.epoche-napoleon.net)',
+    'category' => 'templates',
+    'constraints' => [
+        'depends' => [
+            'typo3' => '>=10.4',
+            'fluid_styled_content' => '=>10.4',
+            'rte_ckeditor' => '=>10.4'
+        ],
+        'conflicts' => [
+        ],
+    ],
+    'autoload' => [
+        'psr-4' => [
+            'EpocheNapoleon\\EpocheNapoleonSitepackage\\' => 'Classes'
+        ],
+    ],
+    'state' => 'stable',
+    'uploadfolder' => 0,
+    'createDirs' => '',
+    'clearCacheOnLoad' => 1,
+    'author' => 'Michael Gnessner',
+    'author_email' => 'typo3-extension@epoche-napoleon.net',
+    'author_company' => 'EPOCHE NAPOLEON',
+    'version' => '1.0.0',
+];

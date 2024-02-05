@@ -1,0 +1,258 @@
+# Lib Configuration
+
+# Headerlogo #
+lib.headerlogo = IMAGE
+lib.headerlogo {
+	file = {$temp.headerlogo.image}
+	altText = Logo von EPOCHE NAPOLEON - Hier klicken um jederzeit auf die Startseite zurück zukommen.
+	titleText = Logo von EPOCHE NAPOLEON
+	stdWrap.typolink.parameter = 1
+}
+# Headerspace #
+lib.headerspace = TEXT
+lib.headerspace {
+	stdWrap.postCOoject = TEXT
+	stdWrap.postCOoject.char = 13
+}
+# Main Navigation #
+lib.mainmenu = HMENU
+lib.mainmenu {
+	entryLevel = 0
+	noBlur = 1
+	wrap = <nav id="menu"><ul class="mainnav"> | </ul></nav>
+	# Einträge für die oberste Menüebende
+	1 = TMENU
+	1 {
+		NO = 1
+		NO {
+			stdWrap.htmlSpecialChars = 1
+			wrapItemAndSub = <li>|</li>
+		}
+	}
+}
+# Pfadmenu #
+lib.pfadmenu = HMENU
+lib.pfadmenu{
+	special = rootline
+	special.range = 0 | -1
+	1 = TMENU
+	1 {
+		noBlur = 1
+		NO {
+			stdWrap.htmlSpecialChars = 1
+			doNotLinkIt = |*| 0 |*| 1
+			allWrap =  |*| |&nbsp;&#62;&nbsp;|*| |
+			stdWrap.crop = 25
+			linkWrap = <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">|</span>
+			ATagParams = itemprop="url"
+			stdWrap.wrap = <span itemprop="title">|</span>
+			stdWrap.crop = 25
+		}
+	}
+}
+# Alphabetische Navigation #
+lib.abcmenu = HMENU
+lib.abcmenu {
+	wrap = <div class="cM">|</div>
+	entryLevel = 1
+	1 = TMENU
+	1 {
+		expAll = 1
+		wrap = <ul>|</ul>
+		NO = 1
+		NO {
+			doNotLinkIt = 1
+			wrapItemAndSub = <li class="cM_NO">|</li>
+			stdWrap.cObject = COA
+			stdWrap.cObject {
+				10 = LOAD_REGISTER
+				10 {
+					Ziel = _self
+					Ziel.override.dataWrap = {field:target // TSFE:intTarget}
+				}
+				20 = TEXT
+				20 {
+					field = nav_title // title
+					typolink.parameter {
+						dataWrap = {field:alias // field:uid} {register:Ziel} typ{field:doktype}
+						if.isTrue.numRows {
+							table = tt_content
+							select.a.field = uid
+						}
+					}
+				}
+			}
+		}
+		ACT < .NO
+		ACT {
+			wrapItemAndSub = <li class="cM_ACT">|</li>
+		}
+		CUR < .NO
+		CUR {
+			wrapItemAndSub = <li class="cM_CUR">|</li>
+		}
+	}
+}
+# Breadcrump-Menu #
+lib.breadcrump = HMENU
+lib.breadcrump {
+	special = rootline
+	special.range = 0 | -1
+	1 = TMENU
+	1 {
+		noBlur = 1
+		NO {
+			stdWrap.htmlSpecialChars = 1
+			doNotLinkIt = |*| 0 |*| 1
+			allWrap =  |*| |&nbsp;&#62;&nbsp;|*| |
+			stdWrap.crop = 25
+			linkWrap = <span itemscope itemtype="http://data-vocabulary.org/Breadcrumb">|</span>
+			ATagParams = itemprop="url"
+			stdWrap.wrap = <span itemprop="title">|</span>
+			stdWrap.crop = 25
+		}
+	}
+}
+# Teasermenu #
+lib.teasermenu = COA
+lib.teasermenu {
+	wrap = <section class="teasermenu">|</section>
+	10 = HMENU
+	10 {
+		special = directory
+		special.data = leveluid:-1,slide
+		1 = TMENU
+		1 {
+			// Sortierreihenfolge
+			// alternativeSortingField = tstamp DESC
+			// Anzahl der maximal dargestellten Menüeinträge
+			maxItems =
+			wrap =
+			NO {
+				wrapItemAndSub = <article>|</article>
+				before.wrap = <header>|</header>
+				before.stdWrap.override.cObject = FILES
+				before.stdWrap.override.cObject {
+						references {
+						table = pages
+						fieldName = media
+						treatIdAsReference = 1
+						data = levelmeida:-1, slide
+					}
+					sorting = sorting_foreign
+					renderObj = IMAGE
+					renderObj {
+						file {
+							import {
+								data = file:current:publicUrl
+			 					listNum = 0
+			 				}
+							width = 75
+							height = 106
+						}
+						titleText.data = File:current:title // field:nav_title // field:title
+						altText.data = file:current:alternative // field:nav:title // field:title
+						imageLinkWrap = 1
+						imageLinkWrap {
+							enable = 1
+							typolink {
+								target =
+								parameter.field = uid
+								ATagParams = class="bildlink"
+							}
+						}
+					}
+					wrap = <header>|<header>
+					append = TEXT
+					append.value =
+				}
+				linkWrap = <p class="teaser-link">|</p>
+				after {
+					field = abstract
+					crop = 250 | ... | 1
+					wrap = <p class="teaser-description">|</p>
+					append = TEXT
+					append.value =
+				}
+			}
+		}
+	}
+}
+lib.contentElement.layoutRootPaths.1500 = EXT:epochenapoleon_sitepackage/Resources/Private/Layouts/fluid_styled_content/
+# Blaetternavigation #
+lib.cagpagebrowser = COA
+lib.cagpagebrowser {
+	wrap = <ul class="browse">|</ul>
+	10 = HMENU
+	10 {
+		special=browse
+		special {
+			items (
+              first | prev | up | next | last |
+			)
+			items.prevnextToSection = 0
+			first.fields.title = Erste Seite
+			first.fields.nav_title = |<<
+			prev.fields.title = vorige Seite
+			prev.fields.nav_title = <
+			up.fields.title = Index
+			up.fields.nav_title = Index
+			next.fields.title = nächste Seite
+			next.fields.nav_title = >
+			last.fields.title = Letzte Seite
+			last.fields.nav_title = >>|
+		}
+		1 = TMENU
+		1 {
+			NO = 1
+			NO {
+				allWrap = <li class="n_{field:title}">|</li>
+				allWrap.insertData = 1
+			}
+		}
+	}
+}
+# Footer #
+lib.footer = TEXT
+lib.footer {
+	data = date:U
+	strftime = &copy;&nbsp;Copyright 2003 - %Y by EPOCHE NAPOLEON
+}
+# ContentElements
+
+# Beaconizer
+lib.beaconizer = COA
+lib.beaconizer {
+	10 = RECORDS
+	10 {
+		source = 25297
+		dontCheckPid = 1
+		tables = tt_content
+	}
+}
+lib.currentUrl = TEXT
+lib.currentUrl.data = getIndpEnv:TYPO3_REQUEST_URL
+# LastChange #
+lib.lastchange = TEXT
+lib.lastchange {
+	data = register : SYS_LASTCHANGED
+	if.isTrue.data = register : SYS_LASTCHANGED
+	strftime = %d. %m. %Y - %H:%m
+	wrap = <div class="lastChange">Letzte Änderung der Seite:&nbsp;|</div>
+}
+lib.playstore = RECORDS
+lib.playstore {
+	tables = tt_content
+	source =
+}
+module.tx_slug {
+	view {
+		templateRootPaths.0 = EXT:slug/Resources/Private/Templates/
+		templateRootPaths.1 = {$module.tx_slug.view.templateRootPath}
+		partialRootPaths.0 = EXT:slug/Resources/Private/Partials/
+		partialRootPaths.1 = EXT:epochenapoleon-sitepackage/Resources/Private/Partials/Slug/
+		partialRootPaths.10 = {$module.tx_slug.view.partialRootPath}
+		layoutRootPaths.0 = EXT:slug/Resources/Private/Layouts/
+		layoutRootPaths.1 = {$module.tx_slug.view.layoutRootPath}
+	}
+}

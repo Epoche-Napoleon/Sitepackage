@@ -1,0 +1,59 @@
+<f:form action="fullFeedbackForm" enctype="multipart/form-data" class="ns-submit-form" pageType="775437232">
+	<f:form.hidden value="1" name="feedbackType" />
+	<f:form.hidden name="newsId" value="{newsId}" />
+	<f:form.hidden name="cid" value="{cData.uid}" />
+	<div class="ns-form-wrap">
+		<f:if condition="{settings.formConf.namefield.include}">
+			<div class="ns-form-group">
+				<label for="name">{settings.formConf.namefield.label}</label>
+				<f:form.textfield name="submittername" placeholder="{settings.formConf.namefield.placeholder}" required="{settings.formConf.namefield.required}" class="validatethis" />
+			</div>
+		</f:if>
+		<f:if condition="{settings.formConf.emailfield.include}">
+			<div class="ns-form-group" style="position:relative;">
+				<label for="submitteremail">{settings.formConf.emailfield.label}</label>
+				<f:form.textfield type="email" id="submitteremail" name="submitteremail" placeholder="{settings.formConf.emailfield.placeholder}" required="{settings.formConf.emailfield.required}" class="validatethis" />
+				<div class="error-msg" id="email_error"><p><f:translate key="email_required" /></p></div>
+				<div class="error-msg" id="email_error_msg"><p><f:translate key="form.emailError" /></p></div>
+			</div>
+		</f:if>
+		<f:if condition="{settings.formConf.ratingsfield.include}">
+			<div class="ns-form-group">
+				<label for="email-{cData.uid}">{settings.formConf.ratingsfield.label}</label>
+				<div class="stars stars-example-css">
+					<f:form.select id="form-star-rating" name="rating">
+						<f:form.select.option value="1">1</f:form.select.option>
+						<f:form.select.option value="2">2</f:form.select.option>
+						<f:form.select.option value="3">3</f:form.select.option>
+						<f:form.select.option value="4">4</f:form.select.option>
+						<f:form.select.option value="5">5</f:form.select.option>
+					</f:form.select>
+				</div>
+			</div>
+		</f:if>
+		<f:if condition="{settings.formConf.reviewHeadline.include}">
+			<div class="ns-form-group" style="position:relative;">
+				<label for="reviewHeadline">{settings.formConf.reviewHeadline.label}</label>
+				<f:form.textfield id="reviewHeadline" name="reviewHeadline" placeholder="{settings.formConf.reviewHeadline.placeholder}" required="{settings.formConf.reviewHeadline.required}" class="validatethis" />
+			</div>
+		</f:if>
+		<f:if condition="{settings.formConf.textareafield.include}">
+			<div class="ns-form-group">
+				<label for="feedback-{cData.uid}">{settings.formConf.textareafield.label}</label>
+				<f:if condition="{settings.formConf.textareafield.required}">
+					<f:then>
+						<f:form.textarea name="comment" placeholder="{settings.formConf.textareafield.placeholder}" additionalAttributes="{required:settings.formConf.textareafield.required}" class="validatethis" />
+					</f:then>
+					<f:else>
+						<f:form.textarea name="comment" placeholder="{settings.formConf.textareafield.placeholder}" />
+					</f:else>
+				</f:if>
+			</div>
+		</f:if>
+		<f:if condition="{settings.formConf.namefield.include} || {settings.formConf.emailfield.include} || {settings.formConf.textareafield.include}">
+			<div class="ns-form-group">
+				<f:form.submit class="nsbtn btn-{settings.buttonstyle}" value="{settings.formConf.submitBtn.label}" />
+			</div>
+		</f:if>
+	</div>
+</f:form>

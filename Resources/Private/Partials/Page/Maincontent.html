@@ -1,0 +1,27 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+	<div id="maincontent">
+		<!-- Left Sidebar -->
+		<div id="left" class="leftheight">
+			<f:cObject typoscriptObjectPath="lib.mainNavi" />
+			<div id="permleft">
+				<f:format.raw>{permleft}</f:format.raw>
+			</div>
+		</div>
+
+		<!-- Right Sidebar -->
+		<div id="right" class="rightheight">
+			<aside id="asidecontent">
+				<f:format.raw>{asidecontent}</f:format.raw>
+			</aside>
+			<div id="permright">
+				<f:format.raw>{permright}</f:format.raw>
+			</div>
+		</div>
+		<!-- Body -->
+		<f:render section="body" />
+		<div class="clearboth">
+			<hr>
+		</div>
+	</div>
+</html>

@@ -1,0 +1,39 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+	<f:layout name="Default" />
+
+	<f:layout name="layout" />
+	<f:section name="body">
+		<div id="center" class="centerheight">
+			<section class="ccontent">
+				<f:if condition="{abcmenushow} ==1" >
+					<f:then>
+						<f:render partial="abcmenu" arguments="{abcmenu:abcmenu}"/>
+					</f:then>
+				</f:if>
+				<f:if condition="{cagmenu}">
+					<div id="browse-nav-top">
+						<f:render partial="cagmenu" arguments="{cagmenu:cagmenu}" />
+					</div>
+				</f:if>
+				<f:format.raw>{content}</f:format.raw>
+				<f:if condition="{data.layout} ==1" >
+					<f:then>
+						<f:cObject typoscriptObjectPath="lib.teasermenu" />
+					</f:then>
+				</f:if>
+				<f:if condition="{cagmenu}">
+					<div id="browse-nav-bottom">
+						<f:render partial="cagmenu" arguments="{cagmenu:cagmenu}" />
+					</div>
+				</f:if>
+
+				<hr class="clearboth" />
+
+				<f:render partial="lastUpdate" arguments="{lastUpdate:lastUpdate}" />
+				<f:render partial="socialshare" arguments="{socialsharebutton:socialsharebutton}" />
+			</section>
+		</div>
+	</f:section>
+</html>

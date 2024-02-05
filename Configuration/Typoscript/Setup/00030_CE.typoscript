@@ -1,0 +1,22 @@
+tt_content {
+	list {
+		20.rxshariff_shariff {
+			settings {
+				enableBackend = 1
+				data {
+ 					lang = de, en
+					mail-body = Hier können Sie ihre Nachricht schreiben.
+					mail-subject = Teile die Seite EPOCHE NAPOLEON
+					mail-url = mailto:redaktion@epoche-napoleon.net
+					media-url =
+					orientation = horizontal
+					referrer-track =
+					services = facebook,googleplus,xing,linkedin,pinterest,qzone,flipboard,tumblr,flattr,diaspora,reddit,stumbleupon,weibo,tencent-weibo,vk,whatsapp,threema,telegram,print,info
+					theme = standard
+					twitter-via = EPOCHENAPOLEON
+					button-style = icon-count
+				}
+			}
+		}
+	}
+}

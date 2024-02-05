@@ -1,0 +1,73 @@
+
+<div class="popup-box {settings.popupSettings.layout}">
+	<div class="popup-header">
+		<h5>{settings.popupSettings.titlebartext}</h5>
+		<a href="javascript:;" class="popup-close"><span class="fa fa-minus"></span></a>
+	</div>
+	<div class="popup-content">
+		<div class="success-msg" style="display: none">
+			<h4>{settings.thankyoutitle}</h4>
+			<p>{settings.thankyoumsg}</p>
+		</div>
+		<f:form action="fullFeedbackForm" enctype="multipart/form-data" class="ns-popup-form" pageType="775437232">
+			<f:form.hidden value="4" name="feedbackType" />
+			<f:form.hidden name="newsId" value="{newsId}" />
+			<f:form.hidden name="cid" value="{cData.uid}" />
+			<div class="ns-form-wrap">
+				<f:if condition="{settings.popupSettings.namefield.include}">
+					<div class="ns-popup-group">
+						<label for="name">{settings.popupSettings.namefield.label}</label>
+						<f:form.textfield name="submittername" placeholder="{settings.popupSettings.namefield.placeholder}" required="{settings.popupSettings.namefield.required}" class="validatethis" />
+					</div>
+				</f:if>
+				<f:if condition="{settings.popupSettings.emailfield.include}">
+					<div class="ns-popup-group" style="position:relative;">
+						<label for="submitteremail">{settings.popupSettings.emailfield.label}</label>
+						<f:form.textfield type="email" id="submitteremail" name="submitteremail" placeholder="{settings.popupSettings.emailfield.placeholder}" required="{settings.popupSettings.emailfield.required}" class="validatethis" />
+					</div>
+				</f:if>
+				<f:if condition="{settings.popupSettings.ratingsfield.include}">
+					<div class="ns-popup-group">
+						<label for="form-star-rating">{settings.popupSettings.ratingsfield.label}</label>
+						<div class="stars stars-example-css">
+							<f:form.select id="popup-star-rating" name="rating">
+								<f:form.select.option value="1">1</f:form.select.option>
+								<f:form.select.option value="2">2</f:form.select.option>
+								<f:form.select.option value="3">3</f:form.select.option>
+								<f:form.select.option value="4">4</f:form.select.option>
+								<f:form.select.option value="5">5</f:form.select.option>
+							</f:form.select>
+						</div>
+					</div>
+				</f:if>
+
+				<f:if condition="{settings.popupSettings.textareafield.include}">
+					<div class="popup-comment">
+						<label for="feedback-{cData.uid}">{settings.popupSettings.textareafield.label}</label>
+						<f:if condition="{settings.formConf.textareafield.required}">
+							<f:then>
+								<f:form.textarea name="comment" placeholder="{settings.popupSettings.textareafield.placeholder}" additionalAttributes="{required:settings.formConf.textareafield.required}" class="validatethis" />
+							</f:then>
+							<f:else>
+								<f:form.textarea name="comment" placeholder="{settings.popupSettings.textareafield.placeholder}" />
+							</f:else>
+						</f:if>
+					</div>
+				</f:if>
+				<div class="popup-email-error">
+					<div class="pull-left">
+						<div class="alert alert-danger">
+							<a class="close">×</a><span><f:translate key="form.emailError" /></span>
+						</div>
+					</div>
+				</div>
+				<f:if condition="{settings.popupSettings.namefield.include} || {settings.popupSettings.emailfield.include} || {settings.popupSettings.textareafield.include}">
+					<div class="submit-block">
+						<f:form.submit class="nsbtn btn-{settings.buttonstyle}" value="{settings.popupSettings.submitBtn.label}" />
+					</div>
+				</f:if>
+			</div>
+		</f:form>
+	</div>
+</div>
+<div class="popup-btn {settings.popupSettings.layout}">{settings.popupSettings.popuptitle}</div>

@@ -1,0 +1,10 @@
+[applicationContext == "Development"]
+entwicklung = 1
+admPanal = 1
+[global]
+
+# Live-System #
+[applicationContext == "Production"]
+entwicklung = 0
+admPanel = 0
+[global]

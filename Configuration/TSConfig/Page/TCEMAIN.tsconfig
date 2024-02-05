@@ -1,0 +1,57 @@
+TCEMAIN {
+	table {
+		pages {
+			disablePrependAtCopy = 1
+			disableHideAtCopy = 0
+		}
+		tt_content {
+			disablePrepandAtCopy = 1
+			disableHideAtCopy = 0
+		}
+		tx_news_domain_model_news {
+			disablePrepandAtCopy = 1
+			disableHideAtCopy = 0
+		}
+	}
+	translateToMessage = Bitte den Artikel in "%s" übersetzen:
+	linkHandler {
+		tx_news {
+			handler = TYPO3\CMS\Recordlist\LinkHandler\RecordLinkHandler
+		# A translatable label can be used with LLL:EXT:theme/locallang.xml:label
+			label = News
+			configuration {
+				table = tx_news_domain_model_news
+				# Default storage pid
+				storagePid = 19
+				# Hide the page tree by setting it to 1
+				hidePageTree = 0
+			}
+			scanAfter = page
+		}
+		tx_glossary2 {
+			handler = TYPO3\CMS\Recordlist\LinkHandler\RecordLinkHandler
+			label = Glossary
+			configuration {
+				table = tx_glossary2_domain_model_glossary
+				storagePid = 2334
+				hidePageTree = 0
+			}
+			scanAfter = page
+		}
+	}
+	// Preview new News-Articel
+	preview {
+		tx_news_domain_model_news {
+			useCacheHash = 1
+			previewPageId = 28
+			useDefaultLanguageRecord = 0
+			fieldToParameterMap {
+				uid = tx_news_pi1[news_preview]
+			}
+			additionalGetParameters {
+				tx_news_pi1.controller = News
+				tx_news_pi1.action = detail
+			}
+		}
+	}
+}

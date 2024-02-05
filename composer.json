@@ -1,44 +1,38 @@
-{
-  "name": "epochenapoleon/sitepackage",
-  "type": "typo3-cms-site-package",
-  "description": "TYPO3 site package for  the website EPOCHE NAPOLEON - Von der Französischen Revolution bis Waterloo",
-  "homepage": "https://www.epoche-napoleon.net",
-  "authors": [
-    {
-      "name": "Michael Gnessner - EPOCHE NAPOLEON",
-      "email": "michael@epoche-napoleon.net",
-      "homepage": "https://www.epoche-napoleon.net",
-      "role": "Developer"
-    }
-  ],
+   {
+  "name": "epochenapoleon/epochenapoleon-sitepackage",
+  "type": "typo3-cms-extension",
+  "description": "Create the sitepackage for the website EPOCHE NAPOLEON",
+  "homepage": "http://www.epoche-napoleon.net",
   "support": {
-    "source": "https://github.com/Epoche-Napoleon/sitepackage",
-    "issues": "https://github.com/Epoche-Napoleon/sitepackage/issues"
+    "source": "https://github.com/Epoche-Napoleon/epochenapoleon_sitepackage",
+    "issues": "https://github.com/Epoche-Napoleon/epochenapoleon_sitepackage/issues"
   },
   "keywords": [
-    "TYPO3",
-    "sitepackage",
-    "bootstrap"
+    "Sitepackage", "TYPO3 CMS", "Configuration"
   ],
-  "license": [
-    "GPL-2.0-or-later"
+  "authors": [
+    {
+    "name": "EPOCHE NAPOLEON - Michael Gnessner",
+    "email": "technik@epoche-napoleon.net",
+    "role": "Developer",
+    "homepage": "http://www.epoche-napoleon.net"
+    }
   ],
-
+  "license": "GPL-2.0-or-later",
   "require": {
-    "typo3/cms-core": "^11.5 || ^12.4",
-    "bk2k/bootstrap-package": "^12.0 || ^13.0"
+    "typo3/cms-core": ">=9.5.17"
   },
   "replace": {
-    "sitepackage": "self.version"
+    "typo3-ter/epochenapoleon_sitepackage": "self.version"
   },
   "autoload": {
     "psr-4": {
-      "EpocheNapoleon\\Sitepackage\\": "Classes/"
+      "epochenapoleon\\EpochenapoleonSitepackage\\": "Classes/"
     }
   },
   "extra": {
     "typo3/cms": {
-      "extension-key": "sitepackage"
+      "extension-key": "epochenapoleon_sitepackage"
     }
   }
 }

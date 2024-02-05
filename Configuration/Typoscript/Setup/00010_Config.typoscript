@@ -1,0 +1,49 @@
+config {
+	admPanel = {$entwicklung}
+	debug = {$entwicklung}
+
+	contentObjectExceptionHandler = 0
+	contentObjectExceptionHandler.errorContent = Bitte entschuldigen Sie, aber leider ist hier ein Fehler aufgetreten. Bitte versuchen Sie es später noch einmal.
+
+	# Message during Page Rendering
+	message_preview = Vorschau
+	message_preview_workspace = Vorschau WORKSPACE
+	index_enable = {$entwicklung}
+	doctype = html5
+	xmlprologue = none
+	noPageTitle = 0
+	pageTitleSeparator = |
+	disableAllHeaderCode = 0
+	disablePrefixComment = {$entwicklung}
+	inlineStyle2TempFile = 1
+
+	cache_clearAtMidnight = {$entwicklung}
+	cache_period = 86400
+	sendCacheHeaders = 1
+
+	spamProtectEmailAddresses = ascii
+	spamProtectEmailAddresses_atSubst = (at)
+	spamProtectEmailAddresses_lastDotSubst = (dot)
+
+	recordLinks {
+		tx_news {
+			typolink {
+				parameter = 28
+				additionalParams.data = field:uid
+				additionalParams.wrap = &tx_news_pi1[controller]=News&news_pi1[action]=detail&news_pi1[news]=|
+				useCacheHash = 1
+			}
+		}
+		tx_glossary2 {
+			typolink {
+				parameter = 407
+				additionalParams.data = field:uid
+				additionalParams.wrap = &tx_glossary2_glossary[action]=show&tx_glossary2_glossary[glossary]=|
+			}
+		}
+	}
+}
+[applicationContext == "Development"]
+	page.meta.robots = noindex, nofollow
+	page.meta.robots.replace = 1
+[End]

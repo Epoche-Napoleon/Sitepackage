@@ -1,7 +1,0 @@
-@import 'EXT:/sitepackage/Configuration/TsConfig/Page/Extensions.tsconfig';
-@import 'EXT:/sitepackage/Configuration/TsConfig/Page/RTE.tsconfig';
-@import 'EXT:/sitepackage/Configuration/TsConfig/Page/TCEFORM.tsconfig';
-@import 'EXT:/sitepackage/Configuration/TsConfig/Page/TCEMAIN.tsconfig';
-@import 'EXT:/sitepackage/Configuration/TsConfig/Page/TCEFORM.tsconfig';
-
-

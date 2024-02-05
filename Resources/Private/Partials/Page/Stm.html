@@ -1,0 +1,10 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+	<f:if condition="{stm}">
+		<ul class="stm-menu" data-responsive-menu="accordion medium-dropbox">
+			<f:for each="{stm}" as="mainItem">
+				<f:render partial="item" arguments="{item:mainItem}"/>
+			</f:for>
+		</ul>
+	</f:if>
+</html>

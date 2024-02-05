@@ -1,0 +1,253 @@
+page = PAGE
+page {
+	meta {
+		viewport = width=device-width, initial-scale=1.0
+	}
+	typeNum = 0
+	config {
+		headerData.5 = COA
+		headerData.5 {
+			10 = TEXT
+			10 {
+				value = {$page.seo_title}
+				insertData = 1
+				ifEmpty.value = EPOCHE NAPOLEON
+			}
+			20 = TEXT
+			20 {
+				value = {$page.title}
+				insertData = 1
+				wrap = &nbsp;&#124;&nbsp; |
+			}
+			wrap = <title>|</title>
+		}
+		headerComment (
+			Das Projekt EPOCHE NAPOLEON ist ein nicht kommerzielles Geschichtsportral.
+		)
+		additionalHeaders {
+		}
+		shortcutIcon = {$page.favicon}
+		doctype = html5
+		xmlprologue = none
+		htmlTag_langKey = DE
+		noPageTitle = 0
+		disableAllHeaderCode = 0
+		disablePrefixComment = {$entwicklung}
+		inlineStyle2TempFile = 1
+		metaCharset = utf-8
+		moveJsFromHeaderToFooter = 1
+
+		compressCss = 1
+		compressJs = 1
+		concatenateCss = 1
+		concatenateJs = 1
+
+		cache = {$entwicklung}
+	}
+	includeCSS {
+		file01 = EXT:sitepackage/Resources/Public/Css/epochenapoleon.css
+		file01 {
+			media = screen
+			forceOnTop = 0
+			disableCompression = 0
+			excludeFromConcatenation = 0
+		}
+		fontawesome = https://use.fontawesome.com/releases/v5.8.1/css/all.css
+		fontawesome {
+			external = 1
+			excludeFromConcatenation = 1
+		}
+	}
+	includeJSFooterlibs {
+		jquery_content_rating =
+		file01 = https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js
+		file01 {
+			async = 0
+			disableCompression = 1
+			excludeFromConcatenation = 1
+			forceOnTop = 1
+		}
+	}
+	10 = FLUIDTEMPLATE
+	10 {
+		format = html
+		layoutRootPaths {
+			0 = EXT:sitepackage/Resources/Private/Layouts/Page/
+			#    1 = {$page.fluidtemplate.10.layoutRootPath}
+		}
+		partialRootPaths {
+			0 = EXT:sitepackage/Resources/Private/Partials/Page/
+			#    1 = {$page.fluidtemplate.10.partialRootPath}
+		}
+		templateRootPaths {
+			0 = EXT:sitepackage/Resources/Private/Templates/Page/
+			#    1 = {$page.fluidtemplate.10.templateRootPath}
+		}
+		templateName {
+			cObject = TEXT
+			cObject {
+				data = pagelayout
+				required = 1
+				case = uppercamelcase
+				split {
+					token = pagets_
+					cObjNum = 1
+					1.current = 1
+				}
+			}
+			ifEmpty = Default
+		}
+		dataProcessing {
+			10 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+			10 {
+				special = directory
+				special.value = 29
+				as = stm
+				expandAll = 1
+				titleField = nav_title // title
+			}
+		}
+		variables {
+			layout = TEXT
+			layout {
+				cObject = TEXT
+				cObject {
+					data = pagelayout
+					required = 1
+					case = uppercamelcase
+					split {
+						token = pagets_
+						cObjNum = 1
+						1.current = 1
+					}
+				}
+			}
+
+			header < lib.header
+			headerlogo < lib.headerlogo
+			headernavigation < lib.headernavigation
+			menu < lib.mainmenu
+			pfad < lib.pfadmenu
+			abcmenu < lib.abcmenu
+			teasermenu < lib.teasermenu
+			socialsharebutton < plugin.shariffBackendUrl
+			lastUpdate < lib.lastchange
+			footer < lib.footer
+			contentrating < lib.newact
+
+			content =< styles.content.get
+			content.select.where = colPos = 0
+			content.stdWrap.dataWrap = <!--TYPO3SEARCH_begin--> | <!--TYPO3SEARCH_end-->
+			contentleft =< styles.content.get
+			contentleft.select.where = colPos = 1
+			asidecontent =< styles.content.get
+			asidecontent.select.where = colPos = 2
+			rand =< styles.content.get
+			rand.select.where = colPos = 3
+
+			playstore < lib.playstore
+			abcmenushow = TEXT
+			abcmenushow.value = {$abcmenushow}
+		}
+	}
+}
+[30 in tree.rootLineIds]
+	page.10.variables.beaconizer < lib.beaconizer
+[global]
+
+[31 in tree.rootLineIds && tree.level == 5 ]
+	page.10.variables.cagmenu < lib.cagpagebrowser
+[global]
+[31 in tree.rootLineIds && tree.level == 6 ]
+	page.10.variables.cagmenu < lib.cagpagebrowser
+[global]
+
+[6477 in tree.rootLineIds || 6463 in tree.rootLineIds || 6455 in tree.rootLineIds || 6437 in tree.rootLineIds || 6431 in tree.rootLineIds || 6385 in tree.rootLineIds  || 6688 in tree.rootLineIds && tree.level == 4]
+	page.10.variables.cagmenu < lib.cagpagebrowser
+	lib.cagpagebrowser.10.special.items = first | prev | up | next | last |
+[global]
+
+[getTSFE().type == 1789]
+	config {
+		disableAllHeaderCode = 1
+		additionalHeaders.10 {
+			header = content-type:text/plain
+		}
+		admPanel = 0
+		xhtml_cleaning = 0
+		disablePrefixComment = 1
+		debug = 0
+	}
+	10 =< tt_content.list.20.beaconizer_generator
+[global]
+
+[getTSFE().type == 9818]
+	config {
+		disableAllHeaderCode = 1
+		xhtml_cleaning = none
+		admPanel = 0
+		debug = 0
+		disablePrefixComment = 1
+		metaCharset = utf-8
+		# before CMS 8 (adjust if using ATOM)
+		additionalHeaders = Content-Type:application/rss+xml;charset=utf-8
+		# CMS 8 (adjust if using ATOM)
+		additionalHeaders.10.header = Content-Type:application/rss+xml;charset=utf-8
+		absRefPrefix = {$plugin.tx_news.rss.channel.link}
+	}
+	pageNewsRSS = PAGE
+	pageNewsRSS {
+		typeNum = 9818
+		10 < tt_content.list.20.news_pi1
+		10 {
+			switchableControllerActions {
+				News {
+					1 = list
+				}
+			}
+			settings < plugin.tx_news.settings
+			settings {
+				// categories = 9
+				// categoryConjunction = notor
+				limit = 30
+				detailPid = 28
+				startingpoint = 4459
+				format = xml
+			}
+		}
+	}
+[global]
+[getTSFE().type == 9819]
+	config {
+		disableAllHeaderCode = 1
+		xhtml_cleaning = none
+		admPanel = 0
+		metaCharset = utf-8
+		additionalHeaders = Content-Type:text/calendar;charset=utf-8
+		disablePrefixComment = 1
+	}
+
+	pageNewsICalendar = PAGE
+	pageNewsICalendar {
+		typeNum = 9819
+		10 < tt_content.list.20.news_pi1
+		10 {
+			switchableControllerActions {
+				News {
+					1 = list
+				}
+			}
+			settings < plugin.tx_news.settings
+			settings {
+				// categories = 9
+				// categoryConjunction = notor
+				limit = 30
+				detailPid = 28
+				startingpoint = 19
+				format = ical
+				domain.data = getEnv:HTTP_HOST
+				useStdWrap = domain
+			}
+		}
+	}
+[global]

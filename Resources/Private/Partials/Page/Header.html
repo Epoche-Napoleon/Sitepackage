@@ -1,0 +1,20 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+	<header id="headerheight">
+		<div id="pageheader">
+			<div id="logo" >
+				<f:format.raw>{headerlogo}</f:format.raw>
+			</div>
+
+			<div id="headertitle">
+				<p id="headertitle1">EPOCHE NAPOLEON</p>
+				<hr />
+				<p id="headertitle2">von der Bastille bis Waterloo</p>
+			</div>
+
+			<div id="stm">
+				<f:render partial="stm" arguments="{headerlogo:headerlogo, stm:stm}"/>
+			</div>
+		</div>
+	</header>
+</html>

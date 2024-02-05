@@ -1,0 +1,90 @@
+a.internal-link,
+a.person {
+	color: #000000;
+	text-decoration: none;
+	border: 2px solid #E00000;
+}
+p.speakerrole {
+	background: #000088;
+	color: #FFFFCC;
+}
+p.speakerrole {
+	font-weight: bold;
+}
+p.speakertext {
+	margin-left: 5rem;
+}
+span.regie {
+	color: #000099;
+	font-style: italic;
+}
+.randtext {
+	background: #AAAAAA;
+	border-left: 1px dotted #C0A16B;
+	float: right;
+	margin-left: 1rem;
+	padding: 0.5rem;
+	max-width: 15rem;
+}
+.internal-link {
+	color: #e00000;
+	font-style: italic;
+}
+.einzug1 {
+	margin-left: 5em;
+}
+.einzug2 {
+	margin-left: 10em;
+}
+.person {
+	background: #000000;
+}
+.person-women {
+	color: #000000;
+	background: #e49f9f;
+}
+.person-men {
+	color: #000000;
+	background: #2b82d9;
+}
+.quelle-online,
+.glossary-link {
+	color: #000000;
+	background: #00bb00;
+}
+.bodytext {
+	text-align: justify;
+	background: #E00000;
+}
+.werktitel {
+	font-style: italic;
+	font-weight: bold;
+}
+.align-left {
+	text-align: left;
+}
+.align-right {
+	text-align: right;
+}
+.align-center {
+	text-align: center;
+}
+.align-justify {
+	text-align: justify;
+}
+p .source {
+	background: #222222;
+	color: #E00000;
+	border: 1px solid #000099;
+}
+a[title="Eigene Seite"] {
+	border: 2px solid #E00000!important;
+	background: #c0a16b;
+	color: #E00000;
+}
+
+a[data-rte-error] {
+	background-color: yellow!important;
+	border: 2px red solid!important;
+	color: black!important;
+}

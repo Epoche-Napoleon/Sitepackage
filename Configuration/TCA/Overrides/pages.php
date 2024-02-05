@@ -1,25 +1,24 @@
 <?php
 
-	declare(strict_types=1);
+declare(strict_types=1);
 
-	call_user_func(function()
-	{
-		/**
-		 * Temporary variables
-		 */
-		$extensionKey = 'sitepackage';
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
-		/**
-		 * Default PageTS for Sitepackage
-		 */
+defined('TYPO3_MODE') || die();
 
-		\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-			'$extensionKey',
-			'Configuration/TsConfig/Page/All.tsconfig',
-			'EPOCHE NAPOLEON Sitepackage'
-		);
-	});
-	/**
-	* Use doktype and fe_group as default values for new pages
-	 */
-	 $GLOBALS['TCA']['pages']['ctrl']['useColumnsForDefaultValues'] = 'doktype, fe_group';
+call_user_func(function () {
+    /**
+     * EXtension key
+     */
+    $extensionKey = 'sitepackage';
+
+    /**
+     * Default Typoscript
+     */
+    ExtensionManagementUtility::registerPageTSConfigFile(
+        $extensionKey,
+        'Configuration/PageTS/page.ts',
+        'EPOCHE NAPOLEON Sitepackage'
+    );
+});
+

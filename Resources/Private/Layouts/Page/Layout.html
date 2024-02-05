@@ -1,0 +1,16 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+	<div id="wrapper">
+		<f:render partial="header" arguments="{_all}" />
+		<f:render partial="pfad" arguments="{pfad:pfad}"/>
+		<div id="maincontent">
+			<f:render partial="left" arguments="{menu:menu,permleft:permleft}"/>
+			<f:render section="body" />
+			<f:render partial="right" arguments="{contentrating:contentrating,asidecontent:asidecontent,permright:permright}"/>
+			<div class="clearboth">
+				<hr>
+			</div>
+		</div>
+		<f:render partial="footer" arguments="{footer:footer}" />
+	</div>
+</html>

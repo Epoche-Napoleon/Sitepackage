@@ -1,0 +1,33 @@
+<div class="feedback-main-level">
+    <div class="feedback-box">
+        <f:if condition="{feedback.ratings} > 0">
+            <div class="ns-feedback-star">
+                <div class="stars stars-example-css">
+                    <select id="n-g-{feedback.uid}">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                </div>
+            </div>
+        </f:if>
+        <div class="feedback-content">
+            <div class="feedback-content-text">
+                <f:if condition="{feedback.reviewHeadline}">
+                    <h3>{feedback.reviewHeadline}</h3>
+                </f:if>
+                <f:if condition="{feedback.comment}">
+                    <p><f:format.nl2br><f:format.raw>{feedback.comment}</f:format.raw></f:format.nl2br></p>
+                </f:if>
+            </div>
+        </div>
+        <div class="ns-feedback-meta">
+            <div class="ns-feedback-author">{feedback.submittername}</div>
+            <div class="ns-feedback-date">
+                <time>{feedback.crdate -> f:format.date(format:'j F Y  H:i A')}</time>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,6 +1,0 @@
-/*
-*/
-# cat=Loigin; type=string; label=Logo
-loginLogo =
-# cat=Login; type=string; label=LLL:EXTsitepackage/Resources/Private/Language/locallang_be.xlf:loginLogo
-loginLogo =

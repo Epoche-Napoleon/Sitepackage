@@ -1,5 +1,0 @@
-RTE {
-	default {
-		preset = epochenapoleon
-	}
-}

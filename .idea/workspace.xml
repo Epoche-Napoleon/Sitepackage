@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="49c9bd82-5945-4161-8785-b6a338f16f37" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Epoche-Napoleon&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="ec3e12ea-f076-4d62-b07b-3a7daa6d523e" />
+        <option name="url" value="https://github.com/Epoche-Napoleon/epochenapoloen_sitepackage" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="1jFYdirwOROWH38PAAsagvjC8hL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SshConsoleOptionsProvider">
+    <option name="myEncoding" value="UTF-8" />
+    <option name="myConnectionType" value="NONE" />
+    <option name="myConnectionId" value="" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\dozent\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TYPO3Settings" version="202.5.8" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="49c9bd82-5945-4161-8785-b6a338f16f37" name="Default Changelist" comment="" />
+      <created>1603401396066</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603401396066</updated>
+      <workItem from="1603401397141" duration="15000" />
+      <workItem from="1698184930590" duration="51000" />
+      <workItem from="1698184997037" duration="380000" />
+      <workItem from="1698185716220" duration="78000" />
+      <workItem from="1698186044216" duration="28000" />
+      <workItem from="1699139245011" duration="359000" />
+      <workItem from="1701713278744" duration="27000" />
+      <workItem from="1701713312503" duration="85000" />
+      <workItem from="1701713427865" duration="608000" />
+      <workItem from="1702213415899" duration="346000" />
+      <workItem from="1704062888650" duration="288000" />
+      <workItem from="1704063270897" duration="1845000" />
+      <workItem from="1704067083489" duration="213000" />
+      <workItem from="1704070388487" duration="92000" />
+      <workItem from="1704833256411" duration="602000" />
+      <workItem from="1704836264929" duration="881000" />
+      <workItem from="1704837813553" duration="23000" />
+    </task>
+    <task id="LOCAL-00001" summary="Update Configuration\TCA\Overrides\pages">
+      <option name="closed" value="true" />
+      <created>1698185748796</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698185748796</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Update Configuration\TCA\Overrides\pages">
+      <option name="closed" value="true" />
+      <created>1698186064804</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698186064804</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update Configuration\TCA\Overrides\pages">
+      <option name="closed" value="true" />
+      <created>1699139266167</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1699139266167</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Update CSS for Expand Navigation">
+      <option name="closed" value="true" />
+      <created>1704063030325</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1704063030325</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Update CSS for Expand Navigation">
+      <option name="closed" value="true" />
+      <created>1704063295220</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1704063295220</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Update CSS for Expand Navigation">
+      <option name="closed" value="true" />
+      <created>1704064895740</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1704064895740</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Update CSS for Expand Navigation">
+      <option name="closed" value="true" />
+      <created>1704067218405</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1704067218405</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Update Fluid-Styled-Content =&gt; Bootstrap5">
+      <option name="closed" value="true" />
+      <created>1704833506885</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1704833506885</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Update CSS for Accordion">
+      <option name="closed" value="true" />
+      <created>1704833594333</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1704833594333</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Change from FSC to Bootstrap5">
+      <option name="closed" value="true" />
+      <created>1704836320610</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1704836320610</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Change from FSC to Bootstrap5">
+      <option name="closed" value="true" />
+      <created>1704836490903</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1704836490903</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="Update Configuration\TCA\Overrides\pages" />
+    <MESSAGE value="Update CSS for Expand Navigation" />
+    <MESSAGE value="Update Fluid-Styled-Content =&gt; Bootstrap5" />
+    <MESSAGE value="Update CSS for Accordion" />
+    <MESSAGE value="Change from FSC to Bootstrap5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Change from FSC to Bootstrap5" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
+  </component>
+</project>

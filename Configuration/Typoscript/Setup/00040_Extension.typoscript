@@ -1,0 +1,308 @@
+# Glossary2
+plugin.tx_glossary2.persistence {
+	# Define Storage PID where glossary records are located
+	storagePid = 4
+}
+# News
+plugin.tx_news {
+	settings {
+		detailPid = 28
+		backPid = 25
+		linkPid = 25
+		displayDummyIfNoMedia = 1
+		list {
+			media {
+				dummyImage = fileadmin/bilder/logo/epoche-napoleon.jpg
+				image {
+					maxWidth = 300
+				}
+			}
+		}
+		analytics {
+			social {
+				facebookLike = 0
+				facebookShare = 0
+				twitter = 0
+			}
+		}
+		detail {
+			showPrevNext = 1
+			showSocialShareButtons = 0
+			showMetaTags = 1
+			format = xml
+		}
+		list {
+			paginate {
+				itemsPerPage = 10
+				insertAbove = 1
+				insertBelow = 1
+				templatePath =
+				prevNextHeaderTags = 1
+				maximumNumberOfLinks = 3
+			}
+			media {
+				image >
+				image {
+					maxWidth = 100
+					maxheight = 100
+				}
+			}
+		}
+		link {
+			skipControllerAndAction = 1
+			hrDate = 1
+			hrDate {
+				year = Y
+				month = m
+				day = d
+			}
+		}
+	}
+}
+plugin.tx_seo {
+	config {
+		sitemaps {
+			news {
+				provider = TYPO3\CMS\Seo\XmlSitemap\RecordsXmlSitemapDataProvider
+				config {
+					table = tx_news_domain_model_news
+					additionalWhere =
+					sortField = tstamp
+					pid = 19
+					recursive = 2
+					url {
+						pageId = 25
+						fieldOfParameterMap {
+							uid = tx_news_pi1[news]
+						}
+						additionalGetParameters {
+							tx_news_pi1.controller = News
+							tx_news_pi1.action = detail
+						}
+						hrDate = 0
+						hrDate {
+							day = d
+							month = m
+							year = Y
+						}
+						useCacheHash = 1
+					}
+				}
+			}
+		}
+		xmlSitemap {
+			sitemaps {
+				news {
+					provider = GeorgRinger\News\Seo\NewsXmlSitemapDataProvider
+					config {
+						excludedTypes = 1,2
+						additionalWhere =
+
+						sortField = datetime
+						lastModifiedField = tstamp
+						pid = 19
+						recursive = 2
+						url {
+							pageId = 28
+							useCategorySinglePid = 1
+
+							hrDate = 0
+							hrDate {
+								day = j
+								month = m
+								year = Y
+							}
+
+							fieldToParameterMap {
+								uid = tx_news_pi1[news]
+							}
+
+							additionalGetParameters {
+								tx_news_pi1.controller = News
+								tx_news_pi1.action = detail
+							}
+
+							useCacheHash = 1
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+# Min #
+plugin.tx_min {
+	tinysource {
+		enable = 1
+		head {
+			stripTabs = 1
+			stripNewLines = 0
+			stripDoubleSpaces = 1
+			stripTwoLinesToOne = 1
+		}
+		body {
+			stripComments = 1
+			stripTabs = 1
+			stripNewLines = 1
+			stripDoubleSpaces = 1
+			stripTwoLinesToOne = 1
+			preventStripOfSearchComment = 1
+		}
+		oneLineMode = 1
+		protectCode {
+			10 = /(<textarea.*?>.*?<\/textarea>)/is
+			20 = /(<pre.*?>.*?<\/pre>)/is
+		}
+	}
+}
+# CKEditor Fontawesome #
+plugin.tx_ckeditor_fontawesome {
+	loadCSS = 1
+	css = https://use.fontawesome.com/releases/v5.8.1/css/all.css
+}
+
+plugin.tx_tgmcopyright_main {
+	settings {
+		extensiontables {
+			tx_news_domain_model_news {
+				detailPid = 28
+				linkParam = &tx_news_pi1[controller]=News&tx_news_pi[news]=
+			}
+		}
+	}
+	view {
+		templateRootPaths {
+			10 = EXT:tgm_copyright/Resources/Private/
+			20 = EXT:epochenapoleon_sitepackage/Resources/Private/Templates/Copyright/
+		}
+		partialRootPaths {
+			10 = EXT:tgm_copyright/Resources/Private/
+			20 = EXT:epochenapoleon_sitepackage/Resources/Private/Partials/Copyright/
+		}
+	}
+}
+
+plugin.tx_solr {
+	index.queue {
+		sys_file_metadata = 1
+		sys_file_metadata {
+			initialization = HMMH\SolrFileIndexer\IndexQueue\FileInitializer
+			indexer = HMMH\SolrFileIndexer\Indexer\FileIndexer
+			allowedFileTypes = 'pdf','doc','docx','xlsx'
+
+			fields {
+				title = title
+				created = crdate
+				changed = tstamp
+
+				size_intS = SOLR_RELATION
+				size_intS {
+					localField = file
+					foreignLabelField = size
+				}
+
+				fileExtension = SOLR_RELATION
+				fileExtension {
+					localField = file
+					foreignLabelField = extension
+				}
+
+				title_stringS = SOLR_RELATION
+				title_stringS {
+					localField = file
+					foreignLabelField = name
+				}
+
+				description = description
+				keywords = keywords
+				author = creator
+			}
+		}
+		news = 1
+		news {
+			table = tx_news_domain_model_news
+			fields {
+				title = title
+				teaser = teaser
+				content = SOLR_CONTENT
+				content {
+					cObject = COA
+					cObject {
+						10 = TEXT
+						10 {
+							field = bodytext
+							noTrimWrap = || |
+						}
+					}
+				}
+				category_stringM = SOLR_RELATIONS
+				category_stringM {
+					localField = categories
+					multivalue = 1
+						}
+				keywords = SOLR_MULTIVALUE
+				keswords {
+					field = keywords
+				}
+				tags_stringM = SOLR_RELATIONS
+				tags_stringM {
+					localField = tags
+					multivalue = 1
+				}
+				url = TEXT
+				url {
+					typolink {
+						parameter = 28
+						additionalParams = &tx_news_pi1[Controller]=News&tx_news_pi1[action]=detail&tx_news_pi1[news]={field:uid}
+						additionalParams.insertData = 1
+						useCacheHash = 1
+						returnLast = url
+					}
+				}
+				attachments {
+					fields = related_files
+				}
+				author = author
+			}
+		}
+	}
+	logging.indexing.queue.news = 1
+
+	search {
+		faceting = 1
+		faceting {
+			facets 	{
+				contentType {
+					label = Content Type
+					field = type
+				}
+			}
+		}
+		results {
+			resultsPerPage = 10
+			resultsPerPageswitch = 10,20,50
+		}
+		sorting = 1
+		sorting {
+			defaultToOrder = asc
+			options {
+				relevance {
+					field = relevance
+					label = Relevanz
+				}
+				title {
+					field = sortTitle
+					label = Titel
+				}
+			}
+		}
+	}
+	suggest = 1
+	suggest {
+		numberOfSuggestions = 10
+		suggestFields = title,teaser,spoll
+		showTopResults = 1
+		numberOfTopResults = 5
+	}
+}
