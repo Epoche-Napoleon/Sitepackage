@@ -1,20 +1,2 @@
-options {
-	pageTree {
-		backgroundColor {
-			31 = #ff9696
-			30 = #0000FF
-			2681 = #E00000
-			390 = #FFFFFF
-		}
-		showPageIdWithTitle = 1
-	}
-}
-mod.web_list {
-	clickTitleMode = 1
-	alternateBgColors = 1
-}
-setup {
-	override {
-		navFrameResizable = 1
-	}
-}
+@import 'EXT:sitepackage/Configuration/TsConfig/User/modweblist.typosript'
+@import 'EXT:sitepackage/Configuration/TsConfig/User/options.typoscript'

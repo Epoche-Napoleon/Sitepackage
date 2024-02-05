@@ -1,11 +1,11 @@
    {
-  "name": "epochenapoleon/epochenapoleon-sitepackage",
+  "name": "epochenapoleon/sitepackage",
   "type": "typo3-cms-extension",
   "description": "Create the sitepackage for the website EPOCHE NAPOLEON",
   "homepage": "http://www.epoche-napoleon.net",
   "support": {
-    "source": "https://github.com/Epoche-Napoleon/epochenapoleon_sitepackage",
-    "issues": "https://github.com/Epoche-Napoleon/epochenapoleon_sitepackage/issues"
+    "source": "https://github.com/Epoche-Napoleon/sitepackage",
+    "issues": "https://github.com/Epoche-Napoleon/sitepackage/issues"
   },
   "keywords": [
     "Sitepackage", "TYPO3 CMS", "Configuration"
@@ -23,16 +23,16 @@
     "typo3/cms-core": ">=9.5.17"
   },
   "replace": {
-    "typo3-ter/epochenapoleon_sitepackage": "self.version"
+    "typo3-ter/sitepackage": "self.version"
   },
   "autoload": {
     "psr-4": {
-      "epochenapoleon\\EpochenapoleonSitepackage\\": "Classes/"
+      "epochenapoleon\\Sitepackage\\": "Classes/"
     }
   },
   "extra": {
     "typo3/cms": {
-      "extension-key": "epochenapoleon_sitepackage"
+      "extension-key": "sitepackage"
     }
   }
 }

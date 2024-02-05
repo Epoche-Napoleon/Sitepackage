@@ -19,10 +19,10 @@ $tca = array(
     ),
   ),
 );
-/*
+
 if (!empty($GLOBALS['TCA']['image'])) {
     return \TYPO3\CMS\Core\Utility\GeneralUtility::array_merge_recursive_overrule($GLOBALS['TCA']['image'], $tca);
 };
-*/
+
 
 

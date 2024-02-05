@@ -1,0 +1,9 @@
+mod.web_list {
+	clickTitleMode = 1
+	alternateBgColors = 1
+}
+setup {
+	override {
+		navFrameResizable = 1
+	}
+}
