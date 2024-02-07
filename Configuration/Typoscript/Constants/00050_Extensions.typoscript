@@ -1,8 +1,9 @@
 # Fluid Styled Content #
 // DEPENDENCIES
 #Update für Bootstrap5
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.txt">
- EXT:epochenapoleon_normdata #
+@import 'EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript'
+
+#EXT:epochenapoleon_normdata
 
 plugin.tx_epochenapoleoncenormdata {
 	view {
@@ -104,20 +105,7 @@ plugin.tx_glossary2 {
 		}
 	}
 }
-# EXT:NITSAN Feedback
-plugin.tx_nsfeedback_feedback {
-	appearanceSettings.appearance.allPage = 0
-	design {
-		fontcolor = #000033
-		buttonbg = #000033
-		btntextcolor = #FFFFFF
-	}
-}
-# EXT:NITSAN NS Gallery_Album
-plugin.tx_nsgallery_album {
-	appearanceSettings.appearance.jQuery = 1
-	storageSettings.storagePid = 6882
-}
+
 # STYLES
 styles {
 	content {
