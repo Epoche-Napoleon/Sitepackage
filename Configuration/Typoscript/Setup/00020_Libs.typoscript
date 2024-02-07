@@ -178,7 +178,7 @@ lib.teasermenu {
 		}
 	}
 }
-lib.contentElement.layoutRootPaths.1500 = EXT:epochenapoleon_sitepackage/Resources/Private/Layouts/fluid_styled_content/
+lib.contentElement.layoutRootPaths.1500 = EXT:sitepackage/Resources/Private/Layouts/fluid_styled_content/
 # Blaetternavigation #
 lib.cagpagebrowser = COA
 lib.cagpagebrowser {

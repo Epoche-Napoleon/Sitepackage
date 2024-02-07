@@ -4,7 +4,6 @@
 @import 'EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript'
 
 #EXT:epochenapoleon_normdata
-
 plugin.tx_epochenapoleoncenormdata {
 	view {
 		templateRootPath = EXT:sitepackage/Resources/Private/Templates/Ce_Normdata/
@@ -12,6 +11,7 @@ plugin.tx_epochenapoleoncenormdata {
 		layoutRootPath = EXT:sitepackage/Ressources/Private/Layouts/Ce_Normdata/
 	}
 }
+# EXT: TGM Copyright
 plugin.tx_tgmcopyright_main {
 	settings {
 		extensiontables.tx_news_domain_model_news.detailPid = 28
@@ -64,7 +64,6 @@ plugin.tx_news {
 		}
 	}
 }
-
 # EXT: CKEditor Fontawesome
 plugin.tx_ckeditor_fontawesome {
 	loadCSS = 1
@@ -105,7 +104,6 @@ plugin.tx_glossary2 {
 		}
 	}
 }
-
 # STYLES
 styles {
 	content {
