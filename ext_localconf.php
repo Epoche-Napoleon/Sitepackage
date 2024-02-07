@@ -18,9 +18,9 @@ $GLOBALS['TYPO3_CONF_VARS']['SYS']['fluid']['namespaces']['EventLinkViewHelper']
 $GLOBALS['TCA']['tx_news_domain_model_news']['ctrl']['thumbnail'] = 'fal_media';
 
 $versionInformation = GeneralUtility::makeInstance(Typo3Version::class);
-// Add page.tsconfig only for TYPO3 12.4 and above
-if ($versionInformation)->getMajorVersion() < 12) {
-	ExtensionManagementUtility::addPageTSConfig(
-		'<INCLUDE_TYPOSCRIPT:source="FILE:EXT:sitepackage/Configuration/TSConfig/page.tsconfig">'
-	);
+// Only include page.tsconfig if TYPO3 version is below 12 so that it is not imported twice.
+if ($versionInformation->getMajorVersion() < 12) {
+	ExtensionManagementUtility::addPageTSConfig('
+      @import "EXT:my_sitepackage/Configuration/page.tsconfig"
+   ');
 }
