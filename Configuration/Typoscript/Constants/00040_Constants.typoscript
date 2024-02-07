@@ -1,7 +1,7 @@
 # Logo der Website
-temp.headerlogo.image = EXT:epochenapoleon_sitepackage/Resources/Public/Images/logo.jpg
+temp.headerlogo.image = EXT:sitepackage/Resources/Public/Images/logo.jpg
 # Favicon der Website
-temp.favicon.image = EXT:epochenapoleon_sitepackage/Resources/Public/Favicon/
+temp.favicon.image = EXT:sitepackage/Resources/Public/Favicon/
 
 cache = 0
 

@@ -6,9 +6,9 @@
 
 plugin.tx_epochenapoleoncenormdata {
 	view {
-		templateRootPath = EXT:epochenapoleon_sitepackage/Resources/Private/Templates/Ce_Normdata/
-		partialRootPath = EXT:epochenapoleon_sitepackage/Ressources/Private/Partials/Ce_Normdata/
-		layoutRootPath = EXT:epochenapoleon_sitepackage/Ressources/Private/Layouts/Ce_Normdata/
+		templateRootPath = EXT:sitepackage/Resources/Private/Templates/Ce_Normdata/
+		partialRootPath = EXT:sitepackage/Ressources/Private/Partials/Ce_Normdata/
+		layoutRootPath = EXT:sitepackage/Ressources/Private/Layouts/Ce_Normdata/
 	}
 }
 plugin.tx_tgmcopyright_main {
@@ -16,9 +16,9 @@ plugin.tx_tgmcopyright_main {
 		extensiontables.tx_news_domain_model_news.detailPid = 28
 	}
 	view {
-		templateRootPath = EXT:epochenapoleon_sitepackage/Resources/Private/Templates/Copyright/
-		partialRootPath = EXT:epochenapoleon_sitepackage/Ressources/Private/Partials/Copyright/
-		layoutRootPath = EXT:epochenapoleon_sitepackage/Ressources/Private/Layouts/Copyright/
+		templateRootPath = EXT:sitepackage/Resources/Private/Templates/Copyright/
+		partialRootPath = EXT:sitepackage/Ressources/Private/Partials/Copyright/
+		layoutRootPath = EXT:sitepackage/Ressources/Private/Layouts/Copyright/
 	}
 }
 # EXT: CS_SEO #
@@ -28,18 +28,18 @@ plugin.tx_csseo {
 		googleAnalytics  = UA-50240478-1
 	}
 	social {
-		defaultImage = EXT:epochenapoleon_sitepackage/Resources/Public/Images/logo.png
+		defaultImage = EXT:sitepackage/Resources/Public/Images/logo.png
 		twitter {
-			defaultImage = EXT:epochenapoleon_sitepackage/Resources/Public/Images/logo.png
+			defaultImage = EXT:sitepackage/Resources/Public/Images/logo.png
 		}
 	}
 }
 # EXT: tx_news #
 plugin.tx_news {
 	view {
-		templateRootPath = EXT:epochenapoleon_sitepackage/Resources/Private/Templates/News/
-		layoutRootPath = EXT:epochenapoleon_sitepackage/Resources/Private/Layouts/News/
-		partialRootPath = EXT:epochenapoleon_sitepackage/Resources/Private/Partials/News/
+		templateRootPath = EXT:sitepackage/Resources/Private/Templates/News/
+		layoutRootPath = EXT:sitepackage/Resources/Private/Layouts/News/
+		partialRootPath = EXT:sitepackage/Resources/Private/Partials/News/
 	}
 	settings {
 		sitemap {
@@ -87,9 +87,9 @@ plugin.tx_maps2 {
 # EXT: Glossary2
 plugin.tx_glossary2 {
 	view {
-		templateRootPath = EXT:epochenapoleon_sitepackage/Resources/Private/Templates/glossary2/
-		partialRootPath = EXT:epochenapoleon_sitepackage/Resources/Private/Partials/glossary2/
-		layoutRootPath = EXT:epochenapoleon_sitepackage/Resources/Private/Layouts/glossary2/
+		templateRootPath = EXT:sitepackage/Resources/Private/Templates/glossary2/
+		partialRootPath = EXT:sitepackage/Resources/Private/Partials/glossary2/
+		layoutRootPath = EXT:sitepackage/Resources/Private/Layouts/glossary2/
 	}
 	persistence {
 		storagePid = 2334
@@ -127,18 +127,8 @@ styles {
 		extTarget = _blank
 	}
 	templates {
-		templateRootPath = EXT:epochenapoleon_sitepacakge/Resources/Private/Templates/Fsc/
-		layoutRootPath = EXT:epochenapoleon_sitepackage/Resources/Private/Layouts/Fsc/
-		partialRootPath = EXT:epochenapoleon_sitepackage/Resources/Private/Partials/Fsc/
-	}
-}
-plugin.tx_nsfeedback_feedback {
-	view {
-		# cat=plugin.tx_nsfeedback_feedback/file; type=string; label=Path to template root (FE)
-		templateRootPath = EXT:epochenapoleon_sitepackage/Resources/Private/Templates/ns_feedback/
-		# cat=plugin.tx_nsfeedback_feedback/file; type=string; label=Path to template partials (FE)
-		partialRootPath = EXT:epochenapoleon_sitepackage/Resources/Private/Partials/ns_feedback/
-		# cat=plugin.tx_nsfeedback_feedback/file; type=string; label=Path to template layouts (FE)
-		layoutRootPath = EXT:epochenapoleon_sitepackage/Resources/Private/Layouts/ns_feedback/
+		templateRootPath = EXT:sitepacakge/Resources/Private/Templates/Fsc/
+		layoutRootPath = EXT:sitepackage/Resources/Private/Layouts/Fsc/
+		partialRootPath = EXT:sitepackage/Resources/Private/Partials/Fsc/
 	}
 }
