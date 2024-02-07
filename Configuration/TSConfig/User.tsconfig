@@ -1,2 +1,2 @@
-@import 'EXT:sitepackage/Configuration/TsConfig/User/modweblist.typosript'
-@import 'EXT:sitepackage/Configuration/TsConfig/User/options.typoscript'
+@import 'EXT:sitepackage/Configuration/TsConfig/User/modweblist.tsconfig'
+@import 'EXT:sitepackage/Configuration/TsConfig/User/options.tsconfig'
