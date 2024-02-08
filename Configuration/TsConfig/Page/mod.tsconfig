@@ -9,7 +9,7 @@ mod {
 	web_layout {
 		editFieldAtATime = 10
 		BackendLayouts {
-			epochenapoleon_sitepackage {
+			sitepackage {
 				title = Standard
 				icon =
 				config {
@@ -41,9 +41,9 @@ mod {
 					}
 				}
 			}
-			2col {
+			sitepackage-2col {
 				title = 2 Spalten
-				icon = EXT:epochenapoleon_sitepackage/Resources/Public/Icons/gridlayout_col2.gif
+				icon = EXT:sitepackage/Resources/Public/Icons/gridlayout_col2.gif
 				config {
 					backend_layout {
 						colCount = 2
@@ -65,9 +65,9 @@ mod {
 					}
 				}
 			}
-			3col {
+			sitepackage-3col {
 				title = 3 Spalten
-				icon = EXT:epochenapoleon_sitepackage/Resources/Public/Icons/gridlayout_col3.gif
+				icon = EXT:sitepackage/Resources/Public/Icons/gridlayout_col3.gif
 				config {
 					backend_layout {
 						colCount = 3
@@ -93,9 +93,9 @@ mod {
 					}
 				}
 			}
-			4col {
+			sitepackage-4col {
 				title = 4 Spalten
-				icon = EXT:epochenapoleon_sitepackage/Resources/Public/Icons/gridlayout_col4.gif
+				icon = EXT:sitepackage/Resources/Public/Icons/gridlayout_col4.gif
 				config {
 					backend_layout {
 						colCount = 4
@@ -135,6 +135,7 @@ mod {
 		alternateBgColors = 1
 		csvDelimiter = ;
 		csvQuote = '
+		disableSingleTableView = 0
 		listOnlyInSingleTableView = 1
 	}
 	show = *
