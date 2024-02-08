@@ -16,7 +16,7 @@ $versionInformation = GeneralUtility::makeInstance(Typo3Version::class);
 // Only include page.tsconfig if TYPO3 version is below 12 so that it is not imported twice.
 if ($versionInformation->getMajorVersion() <= 12) {
 	ExtensionManagementUtility::addPageTSConfig(
-		'<INCLUDE_TYPOSCRIPT: sourec="FILE:"EXT:sitepackage/Configuration/TsConfig/Page.tsconfig">
+		'<INCLUDE_TYPOSCRIPT: source="FILE:"EXT:sitepackage/Configuration/TsConfig/Page.tsconfig">
 	');
 }
 // Adding the default user.tsconfig
