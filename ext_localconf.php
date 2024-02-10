@@ -22,7 +22,7 @@ if ($versionInformation->getMajorVersion() < 12) {
 }
 */
 	ExtensionManagementUtility::addPageTSConfig(
-'<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitepackage/Configuration/TsConfig/Page.tsconfig">	
+'<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitepackage/Configuration/TsConfig/Page.tsconfig">'
 	);
 // Adding the default user.tsconfig
 	ExtensionManagementUtility::addUserTSConfig(
