@@ -14,11 +14,16 @@ $GLOBALS['TCA']['tx_news_domain_model_news']['ctrl']['thumbnail'] = 'fal_media';
 
 $versionInformation = GeneralUtility::makeInstance(Typo3Version::class);
 // Only include page.tsconfig if TYPO3 version is below 12 so that it is not imported twice.
+/*
 if ($versionInformation->getMajorVersion() < 12) {
 	ExtensionManagementUtility::addPageTSConfig(
 		'<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitepackage/Configuration/TsConfig/Page.tsconfig">
 	');
 }
+*/
+	ExtensionManagementUtility::addPageTSConfig(
+'<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitepackage/Configuration/TsConfig/Page.tsconfig">	
+	);
 // Adding the default user.tsconfig
 	ExtensionManagementUtility::addUserTSConfig(
 		'<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitepackage/Configuration/TsConfig/User.tsconfig">
