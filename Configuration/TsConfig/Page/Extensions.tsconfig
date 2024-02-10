@@ -14,13 +14,3 @@ tx_news {
 		redirectToPageOnStart = 19
 	}
 }
-/*
-lib.contentElement{
-	templateRootPaths{
-		1277 = EXT:ce_timeline/Resources/Private/Templates/
-	}
-	partialRootPaths{
-		1277 = EXT:ce_timeline/Resources/Private/Partials/
-	}
-}
-*/
