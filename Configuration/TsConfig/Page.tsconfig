@@ -1,1 +1,6 @@
 @import 'EXT:sitepackage/Configuration/TsConfig/Page/All.tsconfig'
+
+// RTE Konfiguration
+RTE.default {
+	preset = epochenapoleon_preset
+}
