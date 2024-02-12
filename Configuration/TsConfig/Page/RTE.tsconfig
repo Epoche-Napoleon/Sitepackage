@@ -1,4 +1,4 @@
 // RTE Konfiguration
 RTE.default {
-	preset = epochenapoleon_preset
+	preset = epochenapoleon
 }
