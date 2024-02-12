@@ -9,7 +9,7 @@ use TYPO3\CMS\Core\Utility\GeneralUtility;
 defined('TYPO3_MODE') || die();
 
 // Individual RTE Configuration
-$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['epochenapoleon_preset'] = 'EXT:sitepackage/Configuration/RTE/Yaml/Epochenapoleon.yaml';
+$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['epochenapoleon'] = 'EXT:sitepackage/Configuration/RTE/Yaml/epochenapoleon.yaml';
 $GLOBALS['TCA']['tx_news_domain_model_news']['ctrl']['thumbnail'] = 'fal_media';
 
 $versionInformation = GeneralUtility::makeInstance(Typo3Version::class);
