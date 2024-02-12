@@ -1,4 +1,7 @@
 // RTE Konfiguration
-RTE.default {
-	preset = epochenapoleon
+RTE {
+	default {
+		preset = sitepackage
+	}
 }
+
