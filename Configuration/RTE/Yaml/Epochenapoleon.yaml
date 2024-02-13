@@ -56,4 +56,5 @@ editor:
       - { name: "Sprache: Italienisch", element: 'span', attributes: {lang: 'it'} }
       - { name: "Sprache: Latein", element: 'span', attributes: {lang: 'la'} }
 
+    format_tags: "p;h2;h3;h4;h5"
 
