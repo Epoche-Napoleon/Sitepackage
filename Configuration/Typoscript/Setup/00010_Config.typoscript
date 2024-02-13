@@ -1,5 +1,5 @@
 config {
-	admPanel = {$entwicklung}
+	admPanel = {$config.admPanel}
 	debug = {$entwicklung}
 
 	contentObjectExceptionHandler = 0

@@ -1,11 +1,31 @@
+# Config
+config {
+	admPanel = 1
+	headerComment = Website of EPOCHE NAPOLEON
+}
+page {
+	meta {
+		compatible = IE=edge
+		google-site-verification =
+		viewport = width=device-width, initial-scale=1.0
+		author = EPOCHE NAPOLEON
+		description = EPOCHE NAPOLEON
+		keywords = EPOCHE NAPOLEON
+		robots = index,follow
+	}
+	tracking {
+		google {
+			tagManagerContainerId =
+		}
+	}
+}
 # Logo der Website
 temp.headerlogo.image = EXT:sitepackage/Resources/Public/Images/logo.jpg
 # Favicon der Website
 temp.favicon.image = EXT:sitepackage/Resources/Public/Favicon/
 
+
+
 cache = 0
 
-plugin.tx_dp_http2.settings {
-	enabled = true
-	modus = http2push
-}
+
