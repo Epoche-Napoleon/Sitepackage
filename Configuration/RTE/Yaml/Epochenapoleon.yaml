@@ -71,8 +71,14 @@ editor:
       - { name: table }
       - { name: tabletools }
       - /
-      - { name: tools, groups: [ tools, table, specialchar ] }
+      - { name: tools, groups: [ tools, table, specialchar, DPFontAwesome ] }
       - { name: forms, groups: [ forms ] }
       - { name: document, groups: [ mode, document, doctools ] }
       - { name: about, groups: [about] }
+
+    justifyClasses:
+      - align-left
+      - align-center
+      - align-right
+      - align-justify
 
