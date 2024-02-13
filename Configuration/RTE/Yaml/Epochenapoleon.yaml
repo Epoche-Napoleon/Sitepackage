@@ -9,7 +9,7 @@ imports:
 # For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
 editor:
   config:
-    contentsCss: [ "EXT:rte_ckeditor/Resources/Public/Css/contents.css","EXT:epochenapoleon_sitepackage/Resources/Public/Css/editor.css"]
+    contentsCss: [ "EXT:rte_ckeditor/Resources/Public/Css/contents.css", "EXT:sitepackage/Resources/Public/Css/editor.css"]
     # Configuration of the editors window
     width: "900px"
     resize_enabled: true
