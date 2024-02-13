@@ -4,3 +4,26 @@ imports:
   - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Base.yaml" }
   - { resource: "EXT:rte_ckeditor/Configuration/RTE/Editor/Plugins.yaml" }
   - { resource: "EXT:rte_ckeditor_fontawesome/Configuration/RTE/PluginFA5.yaml" }
+
+# Edit configuration for the Editor
+# For complete documentation see http://docs.ckeditor.com/#!/api/CKEDITOR.config
+editor:
+  config:
+    contentsCss: ["EXT:rte_ckeditor/Resources/Public/Css/contents.css", "EXT:epochenapoleon_sitepackage/Resources/Public/Css/editor.css"]
+    # Configuration of the editors window
+    width: "900px"
+    resize_enabled: true
+    resize_dir: 'both'
+    resize_maxWidth: 1200
+    resize_minWidth: 400
+    uiColor: "FFF8DC"
+    # Spellchecker alway on Configuration
+    defaultContentLanguage: "de"
+    defaultLanguage: "de"
+    contentLanguage: "de"
+    language: "de"
+    scayt_autoStartup: true # Spellcheck always on
+    scayt_sLang: "de_DE" # Spellcheck Language
+    wsc_lang: "de_DE"
+
+
