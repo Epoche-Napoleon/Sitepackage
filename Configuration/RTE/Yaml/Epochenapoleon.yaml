@@ -82,7 +82,4 @@ editor:
       - align-right
       - align-justify
 
-    extraPlugins:
-      - about
-
 
