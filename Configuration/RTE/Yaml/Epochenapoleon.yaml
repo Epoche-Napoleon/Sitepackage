@@ -82,6 +82,11 @@ editor:
       - align-right
       - align-justify
 
+    externalPlugins:
+      cowriter:
+          resource: "EXT:cowriter/Resources/Public/JavaScript/ckeditor/plugins/cowriter/"
+
+
     extraPlugins:
       - about
       - autogrow
