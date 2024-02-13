@@ -26,4 +26,34 @@ editor:
     scayt_sLang: "de_DE" # Spellcheck Language
     wsc_lang: "de_DE"
 
+    stylesSet:
+      - { name: "Person zu bearbeiten", element: 'a', attributes: {class: 'person'} }
+      - { name: "Person Frau", element: 'a', attributes: {class: 'person-women'} }
+      - { name: "Person Mann", element: 'a', attributes: {class: 'person-men'} }
+      - { name: "Quelle", element: 'a', attributes: {class: 'quelle-online'} }
+      - { name: "Werktitel", element: 'span', attributes: { class: 'werktitel'} }
+      - { name: "Glossar", element: 'a', attributes: {class: 'glossary-link'} }
+      - { name: "Sprecherrolle", element: 'p', attributes: {class: 'speakerrole'} }
+      - { name: "Sprechertext", element: 'p', attributes: {class: 'speakertext'} }
+      - { name: "Einfacher Einzug", element:  'p', attributes: {class: 'einzug1'} }
+      - { name: "Doppelter Einzug", element:  'p', attributes: {class: 'einzug2'} }
+      - { name: "Regieanweisung", element: 'span', attributes: {class: 'regie'} }
+      - { name: "Rote Schrift", element: 'span', attributes: { class: 'highlighted red'} }
+      - { name: "Wichtig", element: ['p', 'div', 'span', 'ol', 'ul', 'blockquote'], attributes: {class: 'important'} }
+      - { name: "Button", element: 'a', attributes: { class: 'button' } }
+      - { name: "Checkliste", element: 'ul', attributes: { class: 'check-list'} }
+      - { name: "Linksbündig", element: ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'blockquote', 'td', 'th'], attributes: { class: 'align-left' } }
+      - { name: "Mittig", element: ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'blockquote', 'td', 'th'], attributes: { class: 'align-center' } }
+      - { name: "Rechtsbündig", element: ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'blockquote', 'td', 'th'], attributes: { class: 'align-right' } }
+      - { name: "Blocksatz", element: ['h1', 'h2', 'h3', 'h4', 'h5', 'p', 'blockquote', 'td', 'th'], attributes: { class: 'align-justify' } }
+      - { name: "Clearboth", element: 'hr', attributes: {class: 'clearboth'} }
+      - { name: "Marginale", element: 'p', attributes: { class: 'randtext'} }
+      - { name: "Quellennachweis", element: 'p', attributes: { class: 'source'} }
+      - { name: "Telefon", element: ['span','a'], attributes: { class: 'telephone' } }
+      - { name: "Sprache: Englisch", element: 'span', attributes: {lang: 'en'} }
+      - { name: "Sprache: Französisch", element: 'span', attributes: {lang: 'fr'} }
+      - { name: "Sprache: Hebräisch", element: 'span', attributes: {lang: 'he'} }
+      - { name: "Sprache: Italienisch", element: 'span', attributes: {lang: 'it'} }
+      - { name: "Sprache: Latein", element: 'span', attributes: {lang: 'la'} }
+
 
