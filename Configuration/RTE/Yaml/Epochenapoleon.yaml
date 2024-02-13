@@ -94,4 +94,11 @@ editor:
       - selectall
       - wordcount
 
+    removePlugins:
+      - image
+    removeButtons:
+      - Strike
+      - Outdent
+      - Indent
+
 
