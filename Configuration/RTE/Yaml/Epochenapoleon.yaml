@@ -71,7 +71,7 @@ editor:
       - { name: table }
       - { name: tabletools }
       - /
-      - { name: tools, groups: [ tools, table, specialchar, DPFontAwesome ] }
+      - { name: tools, groups: [ tools, table, specialchar, ] }
       - { name: forms, groups: [ forms ] }
       - { name: document, groups: [ mode, document, doctools ] }
       - { name: about, groups: [about] }
