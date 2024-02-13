@@ -100,5 +100,9 @@ editor:
       - Strike
       - Outdent
       - Indent
-
+  processing:
+    allowTags:
+      - u
+      - s
+      - em
 
