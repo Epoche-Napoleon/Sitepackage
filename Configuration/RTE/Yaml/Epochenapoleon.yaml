@@ -65,8 +65,8 @@ editor:
       - /
       - { name: paragraph, groups: [ list, indent, blocks, align, paragrah ] }
       - { name: links, groups: [ links, anchor ] }
-      - { name: clipboard, groups: [ clipboard, cleanup, undo ] }
-      - { name: editing, groups: [ find, selection, spellchecker, editing, removeformat ] }
+      - { name: clipboard, groups: [ clipboard, cleanup, -,undo, redo ] }
+      - { name: editing, groups: [ find, replace, selection, spellchecker, editing, removeformat ] }
       - { name: insert, groups: [ insert ] }
       - /
       - { name: table }
@@ -102,9 +102,9 @@ editor:
       - Outdent
       - Indent
 
-externalPlugins:
-  cowriter:
-    resource: "EXT:cowriter/Resources/Public/JavaScript/ckeditor/plugins/cowriter/"
+    externalPlugins:
+      cowriter:
+        resource: "EXT:cowriter/Resources/Public/JavaScript/ckeditor/plugins/cowriter/"
 
   processing:
     allowTags:
