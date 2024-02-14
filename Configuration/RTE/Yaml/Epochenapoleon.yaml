@@ -103,7 +103,7 @@ editor:
 
     externalPlugins:
       cowriter:
-        resource: "EXT:t3_cowriter/Resources/Public/JavaScript/Plugins/cowriter/"
+        resource: "EXT:t3_cowriter/Resources/Public/JavaScript/Plugins/cowriter/plugin.js"
 
   processing:
     allowTags:
