@@ -104,7 +104,7 @@ editor:
 
     externalPlugins:
       cowriter:
-        resource: "EXT:cowriter/Resources/Public/JavaScript/ckeditor/plugins/cowriter/"
+        resource: "EXT:t3-cowriter/Resources/Public/JavaScript/ckeditor/plugins/cowriter/"
 
   processing:
     allowTags:
@@ -124,11 +124,11 @@ buttons:
           class:
             default: 'link-internal'
       file:
-        properties.:
+        properties:
           class:
             default: 'link-download'
       folder:
-        properties.:
+        properties:
           class:
             default: 'link-folder'
       url:
@@ -204,4 +204,3 @@ classes.:
     name: 'Telephone'
     class: 'telephone'
     type: 'tel'
-
