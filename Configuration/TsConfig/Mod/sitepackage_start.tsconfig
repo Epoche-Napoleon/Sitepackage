@@ -2,8 +2,8 @@ mod {
   web_layout {
     BackendLayouts {
       sitepackage_start {
-        title = LLL:EXT:sitepackage/Resources/Private/Language/Backend.xlf:backend_layout.sitepackage_start
-        icon = EXT:sitepackage/Resources/Public/Images/BackendLayouts/sitepackage_start.svg
+        title = LLL:EXT:sitepackage/Resources/Private/Language/Backend.xlf:backend_layout.sitepackage_start.svg
+        icon = EXT:sitepackage/Resources/Public/Icons/BackendLayouts/sitepackage_start.svg
         config {
           backend_layout {
             colCount = 3
