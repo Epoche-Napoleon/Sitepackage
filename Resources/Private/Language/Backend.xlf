@@ -5,6 +5,10 @@
 		<header/>
 		<body>
 
+			<trans-unit id="backend_layout.sitepackage_start">
+				<source>Sitepackage Homepage</source>
+			</trans-unit>
+
 		</body>
 	</file>
 </xliff>
