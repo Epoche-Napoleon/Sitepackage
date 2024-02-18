@@ -4,3 +4,5 @@
 @import 'EXT:sitepackage/Configuration/TsConfig/Page/TCEMAIN.tsconfig'
 @import 'EXT:sitepackage/Configuration/TsConfig/Page/TCEFORM.tsconfig'
 @import 'EXT:sitepackage/Configuration/TsConfig/Page/mod.tsconfig'
+@import 'EXT:Sitepackage/Configuration/TsConfig/ContentElement/*.tsconfig'
+@import 'EXT:sitepackage/Configuration/TsConfig/Mod/*.tsconfig'

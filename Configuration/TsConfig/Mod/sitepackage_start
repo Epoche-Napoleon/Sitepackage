@@ -1,0 +1,72 @@
+mod.web_layout.BackendLayouts {
+  exampleKey {
+    title = LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:backend_layout.special_start
+    icon = EXT:example_extension/Resources/Public/Images/BackendLayouts/start.gif
+    config {
+      backend_layout {
+        colCount = 3
+        rowCount = 5
+        rows {
+          1 {
+            columns {
+              1 {
+                name = LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:backend_layout.header1
+              }
+              2 {
+                name = LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:backend_layout.header2
+              }
+              3 {
+                name = LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:backend_layout.header3
+              }
+            }
+          }
+          2 {
+            columns {
+              1 {
+                name = LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:backend_layout.column.breadcrumb
+                colspan = 3
+              }
+            }
+          }
+          3 {
+            columns {
+              1 {
+                name =LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:backend_layout.column.mainnavigation
+                colPos = 1
+              }
+              2 {
+                name = LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:backend_layout.column.maincontent
+                colPos
+              }
+              3 {
+                name = LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:backend_layout.column.borderright
+                colPos = 2
+              }
+            }
+          }
+          4 {
+            columns {
+              1 {
+                name = LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:backend_layout.column.info
+                colspan = 3
+              }
+            }
+          }
+          5 {
+            columns {
+              1 {
+                name = LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:backend_layout.column.footer1
+              }
+              2 {
+                name = LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:backend_layout.column.footer2
+              }
+              3 {
+                name = LLL:EXT:bootstrap_package/Resources/Private/Language/Backend.xlf:backend_layout.column.footer3
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
