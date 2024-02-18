@@ -22,8 +22,3 @@ if ($versionInformation->getMajorVersion() < 12) {
 	ExtensionManagementUtility::addUserTSConfig(
 		'<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitepackage/Configuration/TsConfig/User.tsconfig">
 	');
-
-// Added Bugfix for EXT:datamints/Locallang_Builder
-if (!is_array($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['datamintslocallangbuilder_cache'])) {
-	$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['datamintslocallangbuilder_cache'] = [];
-}
