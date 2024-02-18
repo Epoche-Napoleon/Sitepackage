@@ -11,7 +11,6 @@ defined('TYPO3_MODE') || die();
 // Individual RTE Configuration
 $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['sitepackage'] = 'EXT:sitepackage/Configuration/RTE/Yaml/Epochenapoleon.yaml';
 $GLOBALS['TCA']['tx_news_domain_model_news']['ctrl']['thumbnail'] = 'fal_media';
-
 $versionInformation = GeneralUtility::makeInstance(Typo3Version::class);
 // Only include page.tsconfig if TYPO3 version is below 12 so that it is not imported twice.
 if ($versionInformation->getMajorVersion() < 12) {
@@ -19,9 +18,12 @@ if ($versionInformation->getMajorVersion() < 12) {
 		'<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitepackage/Configuration/TsConfig/Page.tsconfig">
 	');
 }
-
 // Adding the default user.tsconfig
 	ExtensionManagementUtility::addUserTSConfig(
 		'<INCLUDE_TYPOSCRIPT: source="FILE:EXT:sitepackage/Configuration/TsConfig/User.tsconfig">
 	');
 
+// Added Bugfix for EXT:datamints/Locallang_Builder
+if (!is_array($GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['datamintslocallangbuilder_cache'])) {
+	$GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['datamintslocallangbuilder_cache'] = [];
+}
