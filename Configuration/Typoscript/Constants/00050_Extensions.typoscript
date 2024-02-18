@@ -122,3 +122,18 @@ plugin.tx_dp_http2.settings {
 	enabled = true
 	modus = http2push
 }
+module.tx_datamintslocallangbuilder {
+	persistence {
+		storagePid = 1
+	}
+	providers {
+		deepl {
+			key = 09441074-dacb-51df-a2f4-2f77741dda79
+			active = 1
+		}
+		google {
+			key =
+			active = 1
+		}
+	}
+}
