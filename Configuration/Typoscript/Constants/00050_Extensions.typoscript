@@ -131,9 +131,5 @@ module.tx_datamintslocallangbuilder {
 			key = 09441074-dacb-51df-a2f4-2f77741dda79
 			active = 1
 		}
-		google {
-			key =
-			active = 1
-		}
 	}
 }
