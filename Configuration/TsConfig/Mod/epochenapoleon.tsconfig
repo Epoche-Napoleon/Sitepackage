@@ -9,7 +9,7 @@ web_layout {
 	editFieldAtATime = 10
 	BackendLayouts {
 		epochenapoleon {
-			title = Standard
+			title = EpocheNapoleon
 			icon =
 			config {
 				backend_layout {
