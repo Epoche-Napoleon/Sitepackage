@@ -8,7 +8,7 @@ view {
 web_layout {
 	editFieldAtATime = 10
 	BackendLayouts {
-		epochenapoleon_sitepackage {
+		epochenapoleon {
 			title = Standard
 			icon =
 			config {
