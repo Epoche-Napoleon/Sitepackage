@@ -1,0 +1,128 @@
+SHARED {
+	defaultLanguageFlag = de
+	defaultLanguageLabel = Deutsch
+}
+view {
+}
+
+web_layout {
+	editFieldAtATime = 10
+	BackendLayouts {
+		epochenapoleon_sitepackage {
+			title = Standard
+			icon =
+			config {
+				backend_layout {
+					colCount = 4
+					rowCount = 1
+					rows {
+						1 {
+							columns {
+								1 {
+									name = Linke Spalte
+									colPos = 1
+								}
+								2 {
+									name = Maincontent
+									colPos = 0
+								}
+								3 {
+									name = Rechte Spalte
+									colPos = 2
+								}
+								4 {
+									name = Rand
+									colPos = 3
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		2col {
+			title = 2 Spalten
+			icon = EXT:esitepackage/Resources/Public/Icons/gridlayout_col2.gif
+			config {
+				backend_layout {
+					colCount = 2
+					rowCount = 1
+					rows {
+						1 {
+							columns {
+								1 {
+									name = Spalte 1
+									colPos = 201
+								}
+								2 {
+									name = Spalte 2
+									colPos = 202
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		3col {
+			title = 3 Spalten
+			icon = EXT:sitepackage/Resources/Public/Icons/gridlayout_col3.gif
+			config {
+				backend_layout {
+					colCount = 3
+					rowCount = 1
+					rows {
+						1 {
+							columns {
+								1 {
+									name = Spalte 1
+									colPos = 301
+								}
+								2 {
+									name = Spalte 2
+									colPos = 302
+								}
+								3 {
+									name = Spalte 3
+									colPos = 303
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		4col {
+			title = 4 Spalten
+			icon = EXT:sitepackage/Resources/Public/Icons/gridlayout_col4.gif
+			config {
+				backend_layout {
+					colCount = 4
+					rowCount = 1
+					rows {
+						1 {
+							columns {
+								1 {
+									name = Spalte 1
+									colPos = 401
+								}
+								2 {
+									name = Spalte 2
+									colPos = 402
+								}
+								3 {
+									name = Spalte 3
+									colPos = 403
+								}
+								4 {
+									name = Spalte 4
+									colPos = 404
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
