@@ -1,39 +1,76 @@
-SHARED {
-	defaultLanguageFlag = de
-	defaultLanguageLabel = Deutsch
-}
-view {
-}
-
 web_layout {
 	editFieldAtATime = 10
 	BackendLayouts {
-		epochenapoleon {
-			title = EpocheNapoleon
-			icon =
-			config {
-				backend_layout {
-					colCount = 4
-					rowCount = 1
-					rows {
-						1 {
-							columns {
-								1 {
-									name = Linke Spalte
-									colPos = 1
-								}
-								2 {
-									name = Maincontent
-									colPos = 0
-								}
-								3 {
-									name = Rechte Spalte
-									colPos = 2
-								}
-								4 {
-									name = Rand
-									colPos = 3
-								}
+		title = Epochenapoleon_sttart
+		icon = EXT:sitepackage/Resources/Public/Icons/BackendLayouts/epochenapoleon_start.svgf
+		config {
+			backend_layout {
+				colCount = 3
+				rowCount = 5
+				rows {
+					1 {
+						columns {
+							1 {
+								name = Headerlogo
+								colPos = 99001
+							}
+							2 {
+								name = Headerbanner
+								colPos = 99002
+							}
+							3 {
+								name = Headermenu
+								colPos = 99003
+							}
+						}
+					}
+					2 {
+						columns {
+							1 {
+								name = Breadcrump
+								colspan = 3
+								colPos = 99004
+							}
+						}
+					}
+					3 {
+						columns {
+							1 {
+								name = ContentLeft
+								colPos = 1
+							}
+							2 {
+								name = ContentMitte
+								colPos = 0
+							}
+							3 {
+								name = ContentRight
+								colPos = 2
+							}
+						}
+					}
+					4 {
+						columns {
+							1 {
+								name = Space
+								colspan = 3
+								colPos = 99005
+							}
+						}
+					}
+					5 {
+						columns {
+							1 {
+								name = FooterLeft
+								colPos = 99101
+							}
+							2 {
+								name = FooterMiddle
+								colPos = 99102
+							}
+							3 {
+								name = FooterRight
+								colPos = 99103
 							}
 						}
 					}

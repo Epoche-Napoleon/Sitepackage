@@ -123,17 +123,26 @@ page {
 				}
 			}
 
-			header < lib.header
-			headerlogo < lib.headerlogo
-			headernavigation < lib.headernavigation
+#			header < lib.header
+			headerlogo =< styles.content.get
+			header.select.where = colPos = 99001
+			headerbanner =< styles.content.get
+			headerbanner.select.where = colPos = 99002
+			headernenu =< styles.content.get
+			headernenu.select.where = colPos = 99003
+
+#			headerlogo < lib.headerlogo
+#			headernavigation < lib.headernavigation
 			menu < lib.mainmenu
-			pfad < lib.pfadmenu
+#			pfad < lib.pfadmenu
+			breadcrumb =< styles.content.get
+			breadcrumb.select.where = colPos = 99004
 			abcmenu < lib.abcmenu
 			teasermenu < lib.teasermenu
 			socialsharebutton < plugin.shariffBackendUrl
 			lastUpdate < lib.lastchange
-			footer < lib.footer
-			contentrating < lib.newact
+#			footer < lib.footer
+
 
 			content =< styles.content.get
 			content.select.where = colPos = 0
